@@ -1,0 +1,11 @@
+{
+    "Nvidia":"https://blogs.nvidia.com/feed/",
+    "Microsoft AI":"https://blogs.microsoft.com/ai/feed/",
+    "Microsoft":"https://learn.microsoft.com/en-us/archive/blogs/machinelearning/feed.xml",
+    "TechCrunch":"https://techcrunch.com/tag/artificial-intelligence/feed/",
+    "MIT Technology Review":"https://www.technologyreview.com/feed/",
+    "Wired":"https://www.wired.com/feed/tag/ai/latest/rss",
+    "Journal of ML Research":"https://jmlr.org/jmlr.xml",
+    "InfoQ":"https://www.infoq.com/rss/",
+    "Apple":"https://machinelearning.apple.com/rss.xml"
+}   
