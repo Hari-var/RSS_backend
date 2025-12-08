@@ -1,3 +1,5 @@
 fastapi
 feedparser
 uvicorn
+pydantic
+google-generativeai
