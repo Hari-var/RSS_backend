@@ -5,6 +5,9 @@ import hashlib
 import re
 from fastapi.middleware.cors import CORSMiddleware
 from datetime import datetime, timedelta
+from pydantic import BaseModel
+from typing import List, Optional
+from template import generate_newsletter
 
 app = FastAPI()
 
@@ -64,12 +67,29 @@ def fetch_rss_feeds(feed_urls, days_to_check=7):
                         })
     return weekly_updates
 
+class Update(BaseModel):
+    id: str
+    title: str
+    description: str
+    image_url: Optional[str] = None
+    link: str
+    source: str
+    published: str
+
+class NewsletterRequest(BaseModel):
+    updates: List[Update]
+
 @app.get("/rss-updates")
 def get_rss_updates():
     with open('source.json', 'r') as f:
         sources = json.load(f)
     rss_feeds = list(sources.values())
     updates = fetch_rss_feeds(rss_feeds)
-    # Sort by published date (latest first)
     updates.sort(key=lambda x: x['published'], reverse=True)
     return {"updates": updates, "count": len(updates)}
+
+@app.post("/generate-newsletter")
+def create_newsletter(request: NewsletterRequest):
+    updates = [update.model_dump() for update in request.updates]
+    html_content = generate_newsletter(updates)
+    return {"html": html_content, "status": "success"}
