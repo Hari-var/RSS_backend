@@ -80,10 +80,17 @@ class Update(BaseModel):
 class NewsletterRequest(BaseModel):
     updates: List[Update]
 
+@app.get("/")
+def health_check():
+    return {"status": "healthy"}
+
 @app.get("/rss-updates")
 def get_rss_updates():
-    with open('source.json', 'r') as f:
-        sources = json.load(f)
+    try:
+        with open('source.json', 'r') as f:
+            sources = json.load(f)
+    except FileNotFoundError:
+        return {"error": "source.json not found", "updates": [], "count": 0}
     rss_feeds = list(sources.values())
     updates = fetch_rss_feeds(rss_feeds)
     updates.sort(key=lambda x: x['published'], reverse=True)
