@@ -1,10 +1,13 @@
 import json
 import datetime
+from dotenv import load_dotenv
 import google.generativeai as genai
 import os
 
 # --- CONFIGURATION ---
-API_KEY = os.getenv("GEMINI_API_KEY", "") 
+load_dotenv()
+API_KEY = os.environ["GEMINI_API_KEY"]
+print(API_KEY)
 
 if API_KEY:
     genai.configure(api_key=API_KEY)
@@ -125,22 +128,25 @@ def generate_intro_text(updates):
     fallback_text = f"<b>Welcome back!</b> In today's edition for {current_date_str}, we are tracking significant moves in the industry, including {topic_str}."
 
     if not API_KEY:
+        print("API Key not found, using fallback intro text.")
         return fallback_text
 
-    try:
-        news_summaries = "\n".join([f"- {u.get('title')}: {u.get('description')}" for u in updates])
-        prompt = f"""
-        You are writing the introduction for a corporate AI newsletter. 
-        Read these highlights: {news_summaries}. 
-        Write a short (2-3 sentences) summary starting with "Welcome back!".
-        Include specific mentions of the top 2 stories.
-        Output format: Plain text only (no markdown).
-        """
-        model = genai.GenerativeModel('gemini-1.5-flash')
-        response = model.generate_content(prompt)
-        return response.text.strip() if response.text else fallback_text
-    except:
-        return fallback_text
+    # try:
+    news_summaries = "\n".join([f"- {u.get('title')}: {u.get('description')}" for u in updates])
+    prompt = f"""
+    You are writing the introduction for a corporate AI newsletter. 
+    Read these highlights: {news_summaries}. 
+    Write a short (2-3 sentences) summary starting with "Welcome back!".
+    Include specific mentions of the top 2 stories.
+    Output format: Plain text only (no markdown).
+    """
+    model = genai.GenerativeModel('gemini-2.5-flash')
+    response = model.generate_content(prompt)
+    print(response)
+    return response.text.strip() if response.text else fallback_text
+    # except:
+    #     print("Error in generating intro text, using fallback.")
+    #     return fallback_text
 
 def create_headline_list(updates):
     # Generates the bullet points inside the green intro box
