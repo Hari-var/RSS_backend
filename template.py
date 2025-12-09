@@ -14,7 +14,8 @@ now = datetime.datetime.now()
 current_year = now.year
 current_date_str = now.strftime("%B %d, %Y")
 
-# --- EMAIL HTML HEAD (CLIENT RESETS) ---
+# --- HTML PARTS (Strictly matching your provided template) ---
+
 HTML_HEAD = f"""<!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
@@ -79,63 +80,6 @@ HTML_FOOTER_TOP = """
                             <td style="padding: 0;">
 """
 
-# The footer items need to be generated carefully for Outlook columns
-# We will use a 2-column layout that works in Outlook
-def create_footer_grid():
-    items = [
-        ("Posts", "https://valuemomentum.club/blog/"),
-        ("Questions", "https://valuemomentum.club/questions/"),
-        ("Podcasts", "https://valuemomentum.club/podcasts/"),
-        ("Events", "https://valuemomentum.club/events/"),
-        ("IdeaAI", "https://valuemomentum.club/ideaai/"),
-        ("Leaderboard", "https://valuemomentum.club/users/")
-    ]
-    
-    html = ""
-    # We will do rows of 2 for simplicity and stability in Outlook
-    for i in range(0, len(items), 2):
-        item1 = items[i]
-        item2 = items[i+1] if i+1 < len(items) else None
-        
-        html += '<tr>'
-        # Column 1
-        html += f"""
-            <td width="48%" valign="top" class="stack-column" style="padding-bottom: 20px;">
-                <table role="presentation" cellspacing="0" cellpadding="15" border="0" width="100%" style="border: 1px solid #e0e0e0; border-radius: 8px;">
-                    <tr>
-                        <td style="text-align: left; background-color: #fafafa;">
-                            <p style="margin: 0 0 5px 0; font-weight: bold; font-size: 14px; color: #333;">{item1[0]}</p>
-                            <a href="{item1[1]}" style="font-size: 12px; font-weight: bold; text-transform: uppercase;">Explore &rsaquo;</a>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        """
-        
-        # Spacer
-        html += '<td width="4%" class="stack-column" style="padding-bottom: 20px;">&nbsp;</td>'
-        
-        # Column 2
-        if item2:
-            html += f"""
-                <td width="48%" valign="top" class="stack-column" style="padding-bottom: 20px;">
-                    <table role="presentation" cellspacing="0" cellpadding="15" border="0" width="100%" style="border: 1px solid #e0e0e0; border-radius: 8px;">
-                        <tr>
-                            <td style="text-align: left; background-color: #fafafa;">
-                                <p style="margin: 0 0 5px 0; font-weight: bold; font-size: 14px; color: #333;">{item2[0]}</p>
-                                <a href="{item2[1]}" style="font-size: 12px; font-weight: bold; text-transform: uppercase;">Explore &rsaquo;</a>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            """
-        else:
-            html += '<td width="48%" class="stack-column">&nbsp;</td>'
-            
-        html += '</tr>'
-        
-    return html
-
 HTML_FOOTER_BOTTOM = f"""
                             </td>
                         </tr>
@@ -168,29 +112,30 @@ HTML_FOOTER_BOTTOM = f"""
 </html>
 """
 
-# --- FUNCTIONS ---
+# --- HELPER FUNCTIONS ---
 
 def generate_intro_text(updates):
-    # (Same logic as before, just kept compact for this snippet)
+    # Generates the text for the green intro box
     if not updates:
-        return "Welcome back! Here are the latest updates."
+        return f"Welcome back! In today's edition for {current_date_str}, we are tracking significant moves in the industry."
     
-    # Fallback
+    # Fallback logic
     topics = [u.get('title') for u in updates[:2]]
     topic_str = " and ".join(topics) if topics else "the latest AI developments"
-    
-    fallback_text = (
-        f"<b>Welcome back!</b> In today's edition for {current_date_str}, we are tracking significant moves in the industry, "
-        f"including {topic_str}."
-    )
-    
+    fallback_text = f"<b>Welcome back!</b> In today's edition for {current_date_str}, we are tracking significant moves in the industry, including {topic_str}."
+
     if not API_KEY:
         return fallback_text
-        
+
     try:
         news_summaries = "\n".join([f"- {u.get('title')}: {u.get('description')}" for u in updates])
-        prompt = f"""You are writing the introduction for a corporate AI newsletter. Read these highlights: {news_summaries}. 
-        Write a short (3 sentences), engaging paragraph starting with "Welcome back!". Professional tone. No markdown."""
+        prompt = f"""
+        You are writing the introduction for a corporate AI newsletter. 
+        Read these highlights: {news_summaries}. 
+        Write a short (2-3 sentences) summary starting with "Welcome back!".
+        Include specific mentions of the top 2 stories.
+        Output format: Plain text only (no markdown).
+        """
         model = genai.GenerativeModel('gemini-1.5-flash')
         response = model.generate_content(prompt)
         return response.text.strip() if response.text else fallback_text
@@ -198,15 +143,17 @@ def generate_intro_text(updates):
         return fallback_text
 
 def create_headline_list(updates):
+    # Generates the bullet points inside the green intro box
     html = '<p style="margin: 0 0 10px 0;"><b>In today’s Generative AI Newsletter:</b></p>'
-    for update in updates[:4]: 
+    for update in updates[:4]:
         source = update.get('source', 'Update').replace('Feed: ', '')
         title = update.get('title', '')
-        # Using a table row for bullets in Outlook is safer, but <br> is acceptable for simple lists
+        # Matches your layout: <div style="margin-bottom: 5px;">&bull; <b>Source:</b> Title</div>
         html += f'<div style="margin-bottom: 5px;">&bull; <b>{source}:</b> {title}</div>'
     return html
 
 def create_article_cards(updates):
+    # Generates the Main Article Rows strictly using your Table structure
     cards_html = ""
     
     for update in updates:
@@ -214,9 +161,8 @@ def create_article_cards(updates):
         desc = update.get('description', '')
         link = update.get('link', '#')
         img_url = update.get('image_url')
-        has_image = img_url and isinstance(img_url, str) and len(img_url.strip()) > 10 
+        has_image = img_url and isinstance(img_url, str) and len(img_url.strip()) > 10
 
-        # We use a Table for the card to enforce layout in Outlook
         cards_html += f"""
         <tr>
             <td style="padding: 0 20px 20px 20px; background-color: #ffffff;">
@@ -254,20 +200,86 @@ def create_article_cards(updates):
         """
     return cards_html
 
-# --- MAIN EXECUTION ---
+def create_footer_grid():
+    # Dynamically builds the 2-column footer grid matching your HTML structure
+    items = [
+        ("Posts", "https://valuemomentum.club/blog/"),
+        ("Questions", "https://valuemomentum.club/questions/"),
+        ("Podcasts", "https://valuemomentum.club/podcasts/"),
+        ("Events", "https://valuemomentum.club/events/"),
+        ("IdeaAI", "https://valuemomentum.club/ideaai/"),
+        ("Leaderboard", "https://valuemomentum.club/users/")
+    ]
+    
+    html = ""
+    # Iterate in steps of 2 to create rows
+    for i in range(0, len(items), 2):
+        item1 = items[i]
+        # Check if there is a second item in the pair
+        item2 = items[i+1] if i+1 < len(items) else None
+        
+        # Start ROW
+        html += "<tr>"
+        
+        # --- COL 1 ---
+        html += f"""
+            <td width="48%" valign="top" class="stack-column" style="padding-bottom: 20px;">
+                <table role="presentation" cellspacing="0" cellpadding="15" border="0" width="100%" style="border: 1px solid #e0e0e0; border-radius: 8px;">
+                    <tr>
+                        <td style="text-align: left; background-color: #fafafa;">
+                            <p style="margin: 0 0 5px 0; font-weight: bold; font-size: 14px; color: #333;">{item1[0]}</p>
+                            <a href="{item1[1]}" style="font-size: 12px; font-weight: bold; text-transform: uppercase;">Explore &rsaquo;</a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        """
+        
+        # --- SPACER ---
+        html += '<td width="4%" class="stack-column" style="padding-bottom: 20px;">&nbsp;</td>'
+        
+        # --- COL 2 ---
+        if item2:
+            html += f"""
+                <td width="48%" valign="top" class="stack-column" style="padding-bottom: 20px;">
+                    <table role="presentation" cellspacing="0" cellpadding="15" border="0" width="100%" style="border: 1px solid #e0e0e0; border-radius: 8px;">
+                        <tr>
+                            <td style="text-align: left; background-color: #fafafa;">
+                                <p style="margin: 0 0 5px 0; font-weight: bold; font-size: 14px; color: #333;">{item2[0]}</p>
+                                <a href="{item2[1]}" style="font-size: 12px; font-weight: bold; text-transform: uppercase;">Explore &rsaquo;</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            """
+        else:
+            # Empty cell if odd number of items
+            html += '<td width="48%" class="stack-column">&nbsp;</td>'
+            
+        # End ROW
+        html += "</tr>"
+        
+    return html
+
+# --- MAIN GENERATION ---
 
 def generate_newsletter(updates):
-    if not updates: return ""
+    if not updates:
+        print("No updates to generate.")
+        return ""
 
+    # 1. Prepare Dynamic Content
     intro_text = generate_intro_text(updates)
     headlines_html = create_headline_list(updates)
     cards_html = create_article_cards(updates)
-    footer_grid = create_footer_grid()
+    footer_grid_html = create_footer_grid()
 
-    # Construct the body
-    # We inject the dynamic parts into the main Table structure
+    # 2. Assemble HTML
+    # We strictly follow the layout: HEAD -> BODY START -> INTRO BOX -> DEVELOPMENTS HEADER -> CARDS -> FOOTER
     
-    body_content = f"""
+    full_html = f"""
+    {HTML_HEAD}
+            
             <tr>
                 <td style="padding: 20px; background-color: #ffffff;">
                     <table role="presentation" cellspacing="0" cellpadding="20" border="0" width="100%" style="background-color: #f6fbf7; border: 1px solid #43A047; border-radius: 8px;">
@@ -297,32 +309,32 @@ def generate_newsletter(updates):
             {cards_html}
 
             {HTML_FOOTER_TOP}
-            {footer_grid}
+            {footer_grid_html}
             {HTML_FOOTER_BOTTOM}
     """
-
-    full_html = HTML_HEAD + body_content
     
+    # 3. Write File
     with open("newsletter.html", "w", encoding="utf-8") as f:
         f.write(full_html)
-    print("Newsletter generated.")
+    print("Success: newsletter.html generated based on custom template.")
     return full_html
 
 if __name__ == "__main__":
+    # Test Data
     dummy_updates = [
         {
-            "title": "OpenAI Releases New Reasoning Model",
-            "description": "The new model demonstrates advanced capabilities in math and coding.",
-            "link": "https://example.com",
-            "source": "TechCrunch",
-            "image_url": "https://placehold.co/600x300/png"
+            "title": "OpenAI Should Stop Naming Its Creations After Products That Already Exist",
+            "description": "From 'cameo' to 'io,' OpenAI keeps trying to call its new and upcoming releases by names that resemble existing trademarks.",
+            "link": "https://www.wired.com/story/openai-cameo-products-that-already-exist/",
+            "source": "Artificial Intelligence Latest",
+            "image_url": "https://media.wired.com/photos/6937252c5220e71e859ab955/master/pass/gear-sora-2239565047.jpg"
         },
         {
-            "title": "Google DeepMind Update",
-            "description": "AlphaGeometry system reaches gold-medalist level performance.",
-            "link": "https://example.com",
-            "source": "The Verge",
-            "image_url": "" 
+            "title": "This AI Model Can Intuit How the Physical World Works",
+            "description": "The V-JEPA system uses ordinary videos to understand the physics of the real world.",
+            "link": "https://www.wired.com/story/how-one-ai-model-creates-a-physical-intuition-of-its-environment/",
+            "source": "Artificial Intelligence Latest",
+            "image_url": "https://media.wired.com/photos/69316737bae73f21e0de4542/master/pass/AIIntuitsPhysics-crKristinaArmitage-Lede-scaled.jpeg"
         }
     ]
     generate_newsletter(dummy_updates)

@@ -9,6 +9,7 @@ from pydantic import BaseModel
 from typing import List, Optional
 from template import generate_newsletter
 from send_email import send_email
+import config
 
 app = FastAPI()
 
@@ -109,6 +110,6 @@ def create_newsletter(request: NewsletterRequest):
 def send_newsletter_email(request: EmailRequest):
     updates = [update.model_dump() for update in request.updates]
     html_content = generate_newsletter(updates)
-    result = send_email(html_content, "Hari.Ponnamanda@valuemomentum.com", "Generative AI Newsletter")
+    result = send_email(html_content, config.receiver_emails, "Generative AI Newsletter")
     return result
 
