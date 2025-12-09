@@ -69,7 +69,19 @@ def fetch_rss_feeds(feed_urls, days_to_check=7):
                         })
     return weekly_updates
 
-class Update(BaseModel):
+class events(BaseModel):
+    event_type: str
+    event_name: str
+    description: Optional[str] = None
+    date_time: str
+    presenter: str
+    presenter_images: Optional[str] = None
+    event_images: Optional[str] = None
+    invite_location: Optional[str] = None
+    invite_link: Optional[str] = None
+
+
+class posts(BaseModel):
     id: str
     title: str
     description: str
@@ -79,7 +91,8 @@ class Update(BaseModel):
     published: str
 
 class NewsletterRequest(BaseModel):
-    updates: List[Update]
+    posts: List[posts]
+    events: List[events]
 
 @app.get("/")
 def health_check():
@@ -98,17 +111,20 @@ def get_rss_updates():
     return {"updates": updates, "count": len(updates)}
 
 class EmailRequest(BaseModel):
-    updates: List[Update]
+    posts: List[posts]
+    events: list[events]
 
 @app.post("/generate-newsletter")
 def create_newsletter(request: NewsletterRequest):
-    updates = [update.model_dump() for update in request.updates]
-    html_content = generate_newsletter(updates)
+    combined = [post.model_dump() for post in request.posts]
+    combined.extend([event.model_dump() for event in request.events])
+    html_content = generate_newsletter(combined)
     return {"html": html_content, "status": "success"}
 
 @app.post("/send-newsletter")
 def send_newsletter_email(request: EmailRequest):
-    updates = [update.model_dump() for update in request.updates]
+    updates = [post.model_dump() for post in request.posts]
+    updates.extend([event.model_dump() for event in request.events])
     html_content = generate_newsletter(updates)
     result = send_email(html_content, config.receiver_emails, "Generative AI Newsletter")
     return result
