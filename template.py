@@ -73,7 +73,7 @@ HTML_HEAD = f"""<!DOCTYPE html>
         <img src="https://valuemomentum.club/wp-content/uploads/2025/10/ValueMomentum_logo.png" style="height: 60px; width: auto; margin: 0 auto;">
     </div>
     <div style="margin-bottom: 20px;">
-        <img src="img/pexels-markus-winkler-1430818-30869149-1.jpg" alt="Cover">
+        <img src="https://raw.githubusercontent.com/Hari-var/RSS_backend/refs/heads/master/pexels-markus-winkler-1430818-30869149-1.jpg" alt="Cover">
     </div>
 """
 

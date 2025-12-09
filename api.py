@@ -8,6 +8,7 @@ from datetime import datetime, timedelta
 from pydantic import BaseModel
 from typing import List, Optional
 from template import generate_newsletter
+from send_email import send_email
 
 app = FastAPI()
 
@@ -88,8 +89,19 @@ def get_rss_updates():
     updates.sort(key=lambda x: x['published'], reverse=True)
     return {"updates": updates, "count": len(updates)}
 
+class EmailRequest(BaseModel):
+    updates: List[Update]
+
 @app.post("/generate-newsletter")
 def create_newsletter(request: NewsletterRequest):
     updates = [update.model_dump() for update in request.updates]
     html_content = generate_newsletter(updates)
     return {"html": html_content, "status": "success"}
+
+@app.post("/send-newsletter")
+def send_newsletter_email(request: EmailRequest):
+    updates = [update.model_dump() for update in request.updates]
+    html_content = generate_newsletter(updates)
+    result = send_email(html_content, "Hari.Ponnamanda@valuemomentum.com", "Generative AI Newsletter")
+    return result
+
