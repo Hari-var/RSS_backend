@@ -95,8 +95,11 @@ def generate_intro_text(updates):
         prompt = f"""
         You are writing the introduction for a corporate AI newsletter. 
         Read these highlights: {news_summaries}. 
-        Write a short (2-3 sentences) summary starting with "Welcome back!".
-        Include specific mentions of the top 2 stories.
+        
+        Do not simply summarize the articles individually. Instead, analyze the collective intelligence of these updates.
+        Write a cohesive paragraph starting with "Welcome back!".
+        Focus on the broader industry trends, underlying themes, or the bigger picture narrative that connects these stories together.
+        
         Output format: Plain text only (no markdown).
         """
         model = genai.GenerativeModel('gemini-2.5-flash')
