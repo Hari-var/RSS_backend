@@ -6,8 +6,8 @@ import os
 
 # --- CONFIGURATION ---
 load_dotenv()
-API_KEY = os.environ["GEMINI_API_KEY"]
-print(API_KEY)
+API_KEY = os.environ.get("GEMINI_API_KEY") # Safely get env var
+# print(API_KEY) # Commented out for security in logs
 
 if API_KEY:
     genai.configure(api_key=API_KEY)
@@ -62,15 +62,14 @@ HTML_HEAD = f"""<!DOCTYPE html>
             </tr>
 """
 
-HTML_FOOTER_TOP = """
-            <tr>
-                <td style="padding: 20px; background-color: #ffffff;">
-"""
+# Emptied to remove the "Looking for something specific?" section
+HTML_FOOTER_TOP = "" 
 
+# Simplified to only include the Copyright line and closing tags
 HTML_FOOTER_BOTTOM = f"""
-                    <div style="text-align: center; padding: 20px; background-color: #f5f5f5; border-radius: 8px;">
-                        <p style="margin: 0; font-size: 12px; color: #888;">&copy; {current_year} ValueMomentum. All rights reserved.</p>
-                    </div>
+            <tr>
+                <td style="padding: 20px; background-color: #ffffff; text-align: center; border-top: 1px solid #eeeeee;">
+                    <p style="margin: 0; font-family: Helvetica, Arial, sans-serif; font-size: 12px; color: #888;">&copy; {current_year} ValueMomentum. All rights reserved.</p>
                 </td>
             </tr>
         </table>
@@ -86,26 +85,26 @@ def generate_intro_text(updates):
     topics = [u.get('title') for u in updates[:2]]
     topic_str = " and ".join(topics) if topics else "the latest AI developments"
     fallback_text = f"<b>Welcome back!</b> In today's edition for {current_date_str}, we are tracking significant moves in the industry, including {topic_str}."
+    
     if not API_KEY:
         print("API Key not found, using fallback intro text.")
         return fallback_text
 
-    # try:
-    news_summaries = "\n".join([f"- {u.get('title')}: {u.get('description')}" for u in updates])
-    prompt = f"""
-    You are writing the introduction for a corporate AI newsletter. 
-    Read these highlights: {news_summaries}. 
-    Write a short (2-3 sentences) summary starting with "Welcome back!".
-    Include specific mentions of the top 2 stories.
-    Output format: Plain text only (no markdown).
-    """
-    model = genai.GenerativeModel('gemini-2.5-flash')
-    response = model.generate_content(prompt)
-    print(response)
-    return response.text.strip() if response.text else fallback_text
-    # except:
-    #     print("Error in generating intro text, using fallback.")
-    #     return fallback_text
+    try:
+        news_summaries = "\n".join([f"- {u.get('title')}: {u.get('description')}" for u in updates])
+        prompt = f"""
+        You are writing the introduction for a corporate AI newsletter. 
+        Read these highlights: {news_summaries}. 
+        Write a short (2-3 sentences) summary starting with "Welcome back!".
+        Include specific mentions of the top 2 stories.
+        Output format: Plain text only (no markdown).
+        """
+        model = genai.GenerativeModel('gemini-2.5-flash')
+        response = model.generate_content(prompt)
+        return response.text.strip() if response.text else fallback_text
+    except Exception as e:
+        print(f"Error in generating intro text: {e}")
+        return fallback_text
 
 def create_headline_list(updates):
     html = '<p style="margin: 0 0 10px 0;"><b>In today\'s Generative AI Newsletter:</b></p>'
@@ -181,42 +180,8 @@ def create_article_cards(updates):
     return cards_html
 
 def create_footer_grid():
-    items = [("Posts", "https://valuemomentum.club/blog/"), ("Questions", "https://valuemomentum.club/questions/"), ("Podcasts", "https://valuemomentum.club/podcasts/"), ("Events", "https://valuemomentum.club/events/"), ("IdeaAI", "https://valuemomentum.club/ideaai/"), ("Leaderboard", "https://valuemomentum.club/users/")]
-    html = ""
-    for i in range(0, len(items), 2):
-        item1 = items[i]
-        item2 = items[i+1] if i+1 < len(items) else None
-        html += "<tr>"
-        html += f'''
-            <td width="48%" valign="top" class="stack-column" style="padding-bottom: 20px;">
-                <table role="presentation" cellspacing="0" cellpadding="15" border="0" width="100%" style="border: 1px solid #e0e0e0; border-radius: 8px;">
-                    <tr>
-                        <td style="text-align: left; background-color: #fafafa;">
-                            <p style="margin: 0 0 5px 0; font-weight: bold; font-size: 14px; color: #333;">{item1[0]}</p>
-                            <a href="{item1[1]}" style="font-size: 12px; font-weight: bold; text-transform: uppercase;">Explore &rsaquo;</a>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        '''
-        html += '<td width="4%" class="stack-column" style="padding-bottom: 20px;">&nbsp;</td>'
-        if item2:
-            html += f'''
-                <td width="48%" valign="top" class="stack-column" style="padding-bottom: 20px;">
-                    <table role="presentation" cellspacing="0" cellpadding="15" border="0" width="100%" style="border: 1px solid #e0e0e0; border-radius: 8px;">
-                        <tr>
-                            <td style="text-align: left; background-color: #fafafa;">
-                                <p style="margin: 0 0 5px 0; font-weight: bold; font-size: 14px; color: #333;">{item2[0]}</p>
-                                <a href="{item2[1]}" style="font-size: 12px; font-weight: bold; text-transform: uppercase;">Explore &rsaquo;</a>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            '''
-        else:
-            html += '<td width="48%" class="stack-column">&nbsp;</td>'
-        html += "</tr>"
-    return html
+    # Grid removed as per request to clear footer links
+    return ""
 
 def generate_newsletter(updates):
     if not updates:
