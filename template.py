@@ -82,7 +82,7 @@ HTML_FOOTER_BOTTOM = f"""
 def generate_intro_text(updates):
     if not updates:
         return f"Welcome back! In today's edition for {current_date_str}, we are tracking significant moves in the industry."
-    topics = [u.get('title') for u in updates[:2]]
+    topics = [u.get('title') for u in updates]
     topic_str = " and ".join(topics) if topics else "the latest AI developments"
     fallback_text = f"<b>Welcome back!</b> In today's edition for {current_date_str}, we are tracking significant moves in the industry, including {topic_str}."
     
