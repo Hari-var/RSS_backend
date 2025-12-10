@@ -4,15 +4,11 @@ from dotenv import load_dotenv
 import google.generativeai as genai
 import os
 
-<<<<<<< HEAD
-API_KEY = os.getenv("GEMINI_API_KEY", "") 
-=======
 # --- CONFIGURATION ---
 load_dotenv()
 API_KEY = os.environ["GEMINI_API_KEY"]
 print(API_KEY)
 
->>>>>>> 2a5ca03d7c2bad774d99ecdbf956bb64502fcbd3
 if API_KEY:
     genai.configure(api_key=API_KEY)
 
@@ -114,16 +110,6 @@ def generate_intro_text(updates):
     if not API_KEY:
         print("API Key not found, using fallback intro text.")
         return fallback_text
-<<<<<<< HEAD
-    try:
-        news_summaries = "\n".join([f"- {u.get('title')}: {u.get('description')}" for u in updates])
-        prompt = f"""You are writing the introduction for a corporate AI newsletter. Read these highlights: {news_summaries}. Write a short (2-3 sentences) summary starting with "Welcome back!". Include specific mentions of the top 2 stories. Output format: Plain text only (no markdown)."""
-        model = genai.GenerativeModel('gemini-1.5-flash')
-        response = model.generate_content(prompt)
-        return response.text.strip() if response.text else fallback_text
-    except:
-        return fallback_text
-=======
 
     # try:
     news_summaries = "\n".join([f"- {u.get('title')}: {u.get('description')}" for u in updates])
@@ -141,7 +127,6 @@ def generate_intro_text(updates):
     # except:
     #     print("Error in generating intro text, using fallback.")
     #     return fallback_text
->>>>>>> 2a5ca03d7c2bad774d99ecdbf956bb64502fcbd3
 
 def create_headline_list(updates):
     html = '<p style="margin: 0 0 10px 0;"><b>In today\'s Generative AI Newsletter:</b></p>'
