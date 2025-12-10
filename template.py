@@ -130,7 +130,7 @@ def generate_intro_text(updates):
 
 def create_headline_list(updates):
     html = '<p style="margin: 0 0 10px 0;"><b>In today\'s Generative AI Newsletter:</b></p>'
-    for update in updates[:4]:
+    for update in updates:
         if 'Event' in update:
             html += f'<div style="margin-bottom: 5px;">&bull; <b>Event:</b> {update.get("title", "")}</div>'
         else:
