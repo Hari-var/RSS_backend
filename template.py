@@ -64,33 +64,12 @@ HTML_HEAD = f"""<!DOCTYPE html>
 
 HTML_FOOTER_TOP = """
             <tr>
-                <td style="padding: 30px 20px 10px 20px; background-color: #ffffff; border-top: 3px solid #1E88E5;">
-                    <h3 style="margin: 0 0 20px 0; font-family: Helvetica, Arial, sans-serif; font-size: 18px; color: #1E88E5;">Looking for something specific?</h3>
-                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                        <tr>
-                            <td style="padding: 0;">
+                <td style="padding: 20px; background-color: #ffffff;">
 """
 
 HTML_FOOTER_BOTTOM = f"""
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-            <tr>
-                <td style="padding: 20px; background-color: #ffffff;">
-                    <div style="background-color: #f5f5f5; border-radius: 8px; padding: 20px; text-align: center;">
-                        <p style="margin: 0 0 15px 0; font-family: Helvetica, Arial, sans-serif; font-size: 14px; color: #444;">
-                            Total Posts: <b>289</b> | Total Questions: <b>124</b>
-                        </p>
-                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center">
-                            <tr>
-                                <td style="border-radius: 6px; background: #43A047;">
-                                    <a href="https://valuemomentum.club/add-post/" style="background: #43A047; border: 1px solid #43A047; font-family: Helvetica, Arial, sans-serif; font-size: 14px; font-weight: bold; color: #ffffff; text-decoration: none; padding: 10px 20px; border-radius: 6px; display: inline-block;">Publish your Post</a>
-                                </td>
-                            </tr>
-                        </table>
-                        <p style="margin-top: 20px; font-size: 12px; color: #888;">&copy; {current_year} ValueMomentum. All rights reserved.</p>
+                    <div style="text-align: center; padding: 20px; background-color: #f5f5f5; border-radius: 8px;">
+                        <p style="margin: 0; font-size: 12px; color: #888;">&copy; {current_year} ValueMomentum. All rights reserved.</p>
                     </div>
                 </td>
             </tr>
