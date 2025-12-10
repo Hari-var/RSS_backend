@@ -91,8 +91,8 @@ class posts(BaseModel):
     published: str
 
 class NewsletterRequest(BaseModel):
-    posts: List[posts]
-    events: List[events]
+    posts: Optional[List[posts]]
+    # events: Optional[List[events]]
 
 @app.get("/")
 def health_check():
@@ -111,21 +111,27 @@ def get_rss_updates():
     return {"updates": updates, "count": len(updates)}
 
 class EmailRequest(BaseModel):
-    posts: List[posts]
-    events: list[events]
+    posts: Optional[List[posts]]
+    # events: Optional[List[events]]
 
 @app.post("/generate-newsletter")
 def create_newsletter(request: NewsletterRequest):
-    combined = [post.model_dump() for post in request.posts]
-    combined.extend([event.model_dump() for event in request.events])
+    combined = []
+    if request.posts:
+        combined.extend([post.model_dump() for post in request.posts])
+    # if request.events:
+    #     combined.extend([event.model_dump() for event in request.events])
     html_content = generate_newsletter(combined)
     return {"html": html_content, "status": "success"}
 
 @app.post("/send-newsletter")
 def send_newsletter_email(request: EmailRequest):
-    updates = [post.model_dump() for post in request.posts]
-    updates.extend([event.model_dump() for event in request.events])
+    updates = []
+    if request.posts:
+        updates.extend([post.model_dump() for post in request.posts])
+    # if request.events:
+    #     updates.extend([event.model_dump() for event in request.events])
     html_content = generate_newsletter(updates)
-    result = send_email(html_content, config.receiver_emails, "Generative AI Newsletter")
+    result = send_email(html_content, ["Hari.Ponnamanda@valuemomentum.com", "nagavardhana.anasuri@valuemomentum.com"], "Generative AI Newsletter")
     return result
 
