@@ -1,13 +1,15 @@
 import json
 import datetime
-from dotenv import load_dotenv
+
 import google.generativeai as genai
-import os
+import config
 
 # --- CONFIGURATION ---
-load_dotenv()
-API_KEY = os.environ.get("GEMINI_API_KEY") # Safely get env var
-# print(API_KEY) # Commented out for security in logs
+API_KEY = config.gemini_api_key
+
+# IMPORTANT: Change this to your actual backend URL where images are hosted
+# If running locally, this allows the email preview to load images
+BASE_IMAGE_URL = "http://127.0.0.1:8000/uploads/"
 
 if API_KEY:
     genai.configure(api_key=API_KEY)
@@ -62,10 +64,8 @@ HTML_HEAD = f"""<!DOCTYPE html>
             </tr>
 """
 
-# Emptied to remove the "Looking for something specific?" section
 HTML_FOOTER_TOP = "" 
 
-# Simplified to only include the Copyright line and closing tags
 HTML_FOOTER_BOTTOM = f"""
             <tr>
                 <td style="padding: 20px; background-color: #ffffff; text-align: center; border-top: 1px solid #eeeeee;">
@@ -82,8 +82,13 @@ HTML_FOOTER_BOTTOM = f"""
 def generate_intro_text(updates):
     if not updates:
         return f"Welcome back! In today's edition for {current_date_str}, we are tracking significant moves in the industry."
-    topics = [u.get('title') for u in updates]
-    topic_str = " and ".join(topics) if topics else "the latest AI developments"
+    
+    # FIX: Handle both 'title' (posts) and 'event_name' (events)
+    # FIX: Filter out None values to prevent crash
+    raw_topics = [u.get('title') or u.get('event_name', '') for u in updates]
+    valid_topics = [t for t in raw_topics if t and t.strip()]
+    
+    topic_str = " and ".join(valid_topics) if valid_topics else "the latest AI developments"
     fallback_text = f"<b>Welcome back!</b> In today's edition for {current_date_str}, we are tracking significant moves in the industry, including {topic_str}."
     
     if not API_KEY:
@@ -91,7 +96,16 @@ def generate_intro_text(updates):
         return fallback_text
 
     try:
-        news_summaries = "\n".join([f"- {u.get('title')}: {u.get('description')}" for u in updates])
+        # Create summaries specifically handling the different keys for Posts vs Events
+        summaries_list = []
+        for u in updates:
+            if 'event_name' in u:
+                 summaries_list.append(f"- Event: {u.get('event_name')} by {u.get('presenter')}")
+            else:
+                 summaries_list.append(f"- Article: {u.get('title')}: {u.get('description')}")
+        
+        news_summaries = "\n".join(summaries_list)
+        
         prompt = f"""
         You are writing the introduction for a corporate AI newsletter. 
         Read these highlights: {news_summaries}. 
@@ -112,20 +126,47 @@ def generate_intro_text(updates):
 def create_headline_list(updates):
     html = '<p style="margin: 0 0 10px 0;"><b>In today\'s Generative AI Newsletter:</b></p>'
     for update in updates:
-        if 'Event' in update:
-            html += f'<div style="margin-bottom: 5px;">&bull; <b>Event:</b> {update.get("title", "")}</div>'
+        # FIX: Check for 'event_name' key instead of 'Events' string
+        if 'event_name' in update:
+            html += f'<div style="margin-bottom: 5px;">&bull; <b>Event:</b> {update.get("event_name", "")}</div>'
         else:
-            html += f'<div style="margin-bottom: 5px;">&bull; <b>{update.get("source", "Update").replace("Feed: ", "")}:</b> {update.get("title", "")}</div>'
+            source = update.get("source", "Update")
+            if source:
+                source = source.replace("Feed: ", "")
+            html += f'<div style="margin-bottom: 5px;">&bull; <b>{source}:</b> {update.get("title", "")}</div>'
     return html
 
 def create_article_cards(updates):
     cards_html = ""
     for update in updates:
-        if 'Event' in update:
-            img = update.get('event_img_url', '')
-            img_html = f'<div style="margin-bottom: 15px;"><img src="{img}" width="500" alt="" border="0" style="width: 100%; max-width: 100%; height: auto; display: block; border-radius: 4px;" class="fluid-img"></div>' if img and len(img.strip()) > 10 else ''
-            presenter_img = update.get('presenter_img_url', '')
-            presenter_html = f'<img src="{presenter_img}" width="40" height="40" alt="" border="0" style="border-radius: 50%; vertical-align: middle; margin-right: 8px;">' if presenter_img and len(presenter_img.strip()) > 10 else ''
+        # FIX: Check for 'event_name' to identify events
+        if 'event_name' in update:
+            # --- HANDLE EVENT ---
+            title = update.get('event_name', '')
+            description = f"Type: {update.get('event_type', '')}" # Events usually don't have descriptions in your JSON, using Type
+            link = update.get('invite_link', '#')
+            location = update.get('invite_location', 'Online')
+            # Format datetime from ISO format to readable format
+            raw_date_time = update.get('date_time', '')
+            try:
+                from datetime import datetime
+                dt = datetime.fromisoformat(raw_date_time.replace('T', ' '))
+                date_time = dt.strftime('%B %d, %Y at %I:%M %p')
+            except:
+                date_time = raw_date_time
+            presenter = update.get('presenter', '')
+            
+            # Get image paths
+            print("DEBUG: Processing event:", update)
+            event_img_path = update.get('event_images')
+            presenter_img_path = update.get('presenter_images')
+            
+            print(f"DEBUG: event_img_path = {event_img_path}")
+            print(f"DEBUG: presenter_img_path = {presenter_img_path}")
+
+            img_html = f'<div style="margin-bottom: 15px;"><img src="{event_img_path}" width="500" alt="Event Image" border="0" style="width: 100%; max-width: 100%; height: auto; display: block; border-radius: 4px;" class="fluid-img"></div>' if event_img_path else ''
+            presenter_html = f'<img src="{presenter_img_path}" width="40" height="40" alt="Presenter" border="0" style="border-radius: 50%; vertical-align: middle; margin-right: 8px;">' if presenter_img_path else ''
+
             cards_html += f'''
         <tr>
             <td style="padding: 0 20px 20px 20px; background-color: #ffffff;">
@@ -133,17 +174,17 @@ def create_article_cards(updates):
                     <tr>
                         <td style="padding: 15px;">
                             <h2 style="margin: 0 0 10px 0; font-family: Helvetica, Arial, sans-serif; font-size: 18px; line-height: 22px; color: #333333;">
-                                <a href="{update.get('invite_link', '#')}" style="color: #FF9800; text-decoration: none;">{update.get('title', '')}</a>
+                                <a href="{link}" style="color: #FF9800; text-decoration: none;">{title}</a>
                             </h2>
                             {img_html}
-                            <p style="margin: 0 0 10px 0; font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 22px; color: #555555;">{update.get('description', '')}</p>
-                            <p style="margin: 0 0 5px 0; font-family: Helvetica, Arial, sans-serif; font-size: 13px; color: #666;"><b>Date:</b> {update.get('date', '')}</p>
-                            <p style="margin: 0 0 5px 0; font-family: Helvetica, Arial, sans-serif; font-size: 13px; color: #666;">{presenter_html}<b>Presenter:</b> {update.get('presenter', '')}</p>
-                            <p style="margin: 0 0 15px 0; font-family: Helvetica, Arial, sans-serif; font-size: 13px; color: #666;"><b>Location:</b> {update.get('invite_location', '')}</p>
+                            <p style="margin: 0 0 10px 0; font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 22px; color: #555555;">{description}</p>
+                            <p style="margin: 0 0 5px 0; font-family: Helvetica, Arial, sans-serif; font-size: 13px; color: #666;"><b>Date & Time:</b> {date_time}</p>
+                            <p style="margin: 0 0 5px 0; font-family: Helvetica, Arial, sans-serif; font-size: 13px; color: #666;">{presenter_html}<b>Presenter:</b> {presenter}</p>
+                            <p style="margin: 0 0 15px 0; font-family: Helvetica, Arial, sans-serif; font-size: 13px; color: #666;"><b>Location:</b> {location}</p>
                             <table role="presentation" cellspacing="0" cellpadding="0" border="0">
                                 <tr>
                                     <td style="border-radius: 4px; background: #FF9800;">
-                                        <a href="{update.get('invite_link', '#')}" style="background: #FF9800; font-family: Helvetica, Arial, sans-serif; font-size: 12px; font-weight: bold; color: #ffffff; text-decoration: none; padding: 8px 12px; display: block; border-radius: 4px; text-transform: uppercase;">View Event &rarr;</a>
+                                        <a href="{link}" style="background: #FF9800; font-family: Helvetica, Arial, sans-serif; font-size: 12px; font-weight: bold; color: #ffffff; text-decoration: none; padding: 8px 12px; display: block; border-radius: 4px; text-transform: uppercase;">View Event &rarr;</a>
                                     </td>
                                 </tr>
                             </table>
@@ -154,8 +195,11 @@ def create_article_cards(updates):
         </tr>
             '''
         else:
+            # --- HANDLE STANDARD POST ---
             img = update.get('image_url')
+            # Handle case where image_url might be None
             img_html = f'<div style="margin-bottom: 15px;"><img src="{img}" width="500" alt="" border="0" style="width: 100%; max-width: 100%; height: auto; display: block; border-radius: 4px;" class="fluid-img"></div>' if img and isinstance(img, str) and len(img.strip()) > 10 else ''
+            
             cards_html += f'''
         <tr>
             <td style="padding: 0 20px 20px 20px; background-color: #ffffff;">
@@ -183,17 +227,18 @@ def create_article_cards(updates):
     return cards_html
 
 def create_footer_grid():
-    # Grid removed as per request to clear footer links
     return ""
 
 def generate_newsletter(updates):
     if not updates:
         print("No updates to generate.")
         return ""
+    
     intro_text = generate_intro_text(updates)
     headlines_html = create_headline_list(updates)
     cards_html = create_article_cards(updates)
     footer_grid_html = create_footer_grid()
+    
     full_html = f"""
     {HTML_HEAD}
             <tr>
@@ -229,10 +274,3 @@ def generate_newsletter(updates):
         f.write(full_html)
     print("Success: newsletter.html generated based on custom template.")
     return full_html
-
-if __name__ == "__main__":
-    dummy_updates = [
-        {"title": "OpenAI Should Stop Naming Its Creations After Products That Already Exist", "description": "From 'cameo' to 'io,' OpenAI keeps trying to call its new and upcoming releases by names that resemble existing trademarks.", "link": "https://www.wired.com/story/openai-cameo-products-that-already-exist/", "source": "Artificial Intelligence Latest", "image_url": "https://media.wired.com/photos/6937252c5220e71e859ab955/master/pass/gear-sora-2239565047.jpg"},
-        {"title": "This AI Model Can Intuit How the Physical World Works", "description": "The V-JEPA system uses ordinary videos to understand the physics of the real world.", "link": "https://www.wired.com/story/how-one-ai-model-creates-a-physical-intuition-of-its-environment/", "source": "Artificial Intelligence Latest", "image_url": "https://media.wired.com/photos/69316737bae73f21e0de4542/master/pass/AIIntuitsPhysics-crKristinaArmitage-Lede-scaled.jpeg"}
-    ]
-    generate_newsletter(dummy_updates)

@@ -1,51 +1,86 @@
-import feedparser
+from fastapi import FastAPI, UploadFile, File, Form, Request
+from fastapi.responses import FileResponse
+from typing import List, Optional
+from pydantic import BaseModel
 import json
-from datetime import datetime, timedelta
+import os
+from fastapi.middleware.cors import CORSMiddleware
  
-def fetch_rss_feeds(feed_urls, days_to_check=7):
-    # Calculate the cutoff date for the last week
-    cutoff_date = datetime.now() - timedelta(days=days_to_check)
-    keywords = ['llm', 'transformer', 'fine-tuning', 'rag', 'vector db', 'gen-ai', 'model architecture', 'artificial intelligence', 'machine learning', 'ai', 'artificial-intelligence', 'deep learning', 'neural network', 'gpt', 'bert', 'chatbot', 'nlp', 'computer vision', 'reinforcement learning', 'supervised learning', 'unsupervised learning', 'generative ai', 'foundation model', 'large language model', 'embedding', 'attention mechanism', 'backpropagation', 'gradient descent', 'convolutional neural network', 'cnn', 'rnn', 'lstm', 'gru', 'autoencoder', 'gan', 'diffusion model', 'prompt engineering', 'zero-shot', 'few-shot', 'transfer learning', 'federated learning', 'mlops', 'model training', 'inference', 'pytorch', 'tensorflow', 'hugging face', 'openai', 'meta', 'google ai', 'anthropic', 'nvidia', 'microsoft ai', 'amazon ai', 'deepmind', 'claude', 'gemini', 'llama', 'chatgpt']
+app = FastAPI()
+
+# Create uploads directory
+os.makedirs("uploads", exist_ok=True)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows all origins
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+class Post(BaseModel):
+    id: str
+    title: str
+    description: str
+    image_url: Optional[str] = None
+    link: str
+    source: str
+    published: str
+
+class Event(BaseModel):
+    event_type: str
+    event_name: str
+    description: Optional[str] = None
+    date_time: str
+    presenter: str
+    invite_location: Optional[str] = None
+    invite_link: Optional[str] = None
+ 
+@app.post("/events")
+async def create_newsletter(
+    posts: Optional[str] = Form(None),
+    events: Optional[List[str]] = Form(None),
+    presenter_images: Optional[UploadFile] = File(None),
+    event_images: Optional[UploadFile] = File(None)
+):
+    result = {"posts": [], "events": [], "status": "success", "image_urls": []}
     
-    weekly_updates = []
-    for url in feed_urls:
-        print(f"Processing: {url}")
-        feed = feedparser.parse(url)
-        print(f"Found {len(feed.entries)} entries from {feed.feed.get('title', 'Unknown')}")
-        
-        for entry in feed.entries:
-            # Check if the entry was published within the last week
-            if hasattr(entry, 'published_parsed'):
-                published_time = datetime(*entry.published_parsed[:6])
-                if published_time > cutoff_date:
-                    # Check if title contains any of the keywords
-                    if any(keyword.lower() in entry.title.lower() for keyword in keywords):
-                        weekly_updates.append({
-                            'title': entry.title,
-                            'link': entry.link,
-                            'source': feed.feed.title,
-                            'published': published_time.strftime('%Y-%m-%d')
-                        })
-        print(f"Added {len([u for u in weekly_updates if u['source'] == feed.feed.get('title', 'Unknown')])} recent entries")
-    return weekly_updates
- 
-# Load RSS feeds from source.json
-with open('source.json', 'r') as f:
-    sources = json.load(f)
-RSS_FEEDS = list(sources.values()) 
-all_updates = fetch_rss_feeds(RSS_FEEDS)
+    if posts:
+        try:
+            posts_data = json.loads(posts)
+            result["posts"] = [Post(**post).model_dump() for post in posts_data]
+        except Exception as e:
+            result["error"] = f"Posts error: {str(e)}"
+    
+    if events:
+        try:
+            events_data = [json.loads(event) for event in events]
+            result["events"] = [Event(**event).model_dump() for event in events_data]
+        except Exception as e:
+            result["error"] = f"Events error: {str(e)}"
+    
+    # Handle image uploads
+    if presenter_images:
+        try:
+            filename = f"presenter_{presenter_images.filename}"
+            with open(f"uploads/{filename}", "wb") as f:
+                f.write(await presenter_images.read())
+            result["image_urls"].append(f"/images/{filename}")
+        except Exception as e:
+            result["error"] = f"Presenter image error: {str(e)}"
+    
+    if event_images:
+        try:
+            filename = f"event_{event_images.filename}"
+            with open(f"uploads/{filename}", "wb") as f:
+                f.write(await event_images.read())
+            result["image_urls"].append(f"/images/{filename}")
+        except Exception as e:
+            result["error"] = f"Event image error: {str(e)}"
+    
+    return result
 
-print(all_updates[0].keys())
-
-#send all_updates to txt file
-# with open('rss_updates.txt', 'a', encoding='utf-8') as f:
-#     // "Computer Weekly":"https://www.computerweekly.com/rss/All-Computer-Weekly-content.xml",
-#     for update in all_updates:
-#         f.write(f"Title: {update['title']}\n")
-#         f.write(f"Link: {update['link']}\n")
-#         # f.write(f"Source: {update['source']}\n")
-#         f.write(f"Published: {update['published']}\n")
-        
-        
-#         f.write("\n")
-# # print(all_updates)
+@app.get("/images/{filename}")
+async def get_image(filename: str):
+    return FileResponse(f"uploads/{filename}")
