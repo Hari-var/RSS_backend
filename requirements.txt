@@ -4,4 +4,5 @@ uvicorn
 gunicorn
 pydantic
 google-generativeai
-dotenv
+python-dotenv
+azure-storage-blob
