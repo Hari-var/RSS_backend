@@ -1,0 +1,66 @@
+[
+  {
+    "id": "c472d14e-89b3-4c32-b7aa-7e6c387a3035",
+    "event_type": "code club",
+    "event_name": "AI for Engineers: Redefining the SDLC",
+    "presenter": "guest speakers from Microsoft & AWS",
+    "date_time": "2025-12-26T09:30",
+    "invite_location": "Palnadu",
+    "invite_link": "https://learnix-bootcamp-2025.azurewebsites.net/",
+    "presenter_images": null,
+    "event_images": "https://eventdetails.blob.core.windows.net/events/c472d14e-89b3-4c32-b7aa-7e6c387a3035_event_Screenshot 2025-12-15 134243.png",
+    "created_at": "2025-12-15T14:10:47.400014"
+  },
+  {
+    "id": "f37d12e5-6c1b-4d05-95df-a4c2bb47d0f5",
+    "event_type": "string",
+    "event_name": "string",
+    "presenter": "string",
+    "date_time": "string",
+    "description": "string",
+    "invite_location": "string",
+    "invite_link": "string",
+    "presenter_images": "https://eventdetails.blob.core.windows.net/events/f37d12e5-6c1b-4d05-95df-a4c2bb47d0f5_presenter_Screenshot 2025-08-18 161152.png",
+    "event_images": "https://eventdetails.blob.core.windows.net/events/f37d12e5-6c1b-4d05-95df-a4c2bb47d0f5_event_Screenshot 2025-08-18 161152.png",
+    "created_at": "2025-12-16T10:47:02.988511"
+  },
+  {
+    "id": "656a9d66-9466-44e9-82ec-7cafdb5a7dd9",
+    "event_type": "Code Club",
+    "event_name": "nhfgbvbcvc",
+    "presenter": "nbgbvbcbc",
+    "date_time": "2025-12-16T05:25",
+    "description": "",
+    "invite_location": "Palnadu",
+    "invite_link": "https://y.com",
+    "presenter_images": "https://eventdetails.blob.core.windows.net/events/656a9d66-9466-44e9-82ec-7cafdb5a7dd9_presenter_Screenshot 2025-08-25 154022.png",
+    "event_images": "https://eventdetails.blob.core.windows.net/events/656a9d66-9466-44e9-82ec-7cafdb5a7dd9_event_Screenshot 2025-08-18 161152.png",
+    "created_at": "2025-12-16T10:56:43.582215"
+  },
+  {
+    "id": "89c9ce77-55e4-4fd6-8491-b567819f575d",
+    "event_type": "LearniX Bootcamp",
+    "event_name": "nhfgbvbcvc",
+    "presenter": "nbgbvbcbc",
+    "date_time": "2025-12-16T06:09",
+    "description": "",
+    "invite_location": "VAM Towers",
+    "invite_link": "https://y.com",
+    "presenter_images": "https://eventdetails.blob.core.windows.net/events/89c9ce77-55e4-4fd6-8491-b567819f575d_presenter_Screenshot 2025-08-18 161152.png",
+    "event_images": "https://eventdetails.blob.core.windows.net/events/89c9ce77-55e4-4fd6-8491-b567819f575d_event_Screenshot 2025-08-25 154022.png",
+    "created_at": "2025-12-16T11:41:00.045949"
+  },
+  {
+    "id": "a5d392f7-33e4-4d3c-8cee-8cec8b49b518",
+    "event_type": "Code Club",
+    "event_name": "nhfgbvbcvc",
+    "presenter": "nbgbvbcbc",
+    "date_time": "2025-12-16T06:12",
+    "description": "",
+    "invite_location": "VAM Towers",
+    "invite_link": "https://y.com",
+    "presenter_images": "https://eventdetails.blob.core.windows.net/events/a5d392f7-33e4-4d3c-8cee-8cec8b49b518_presenter_Screenshot 2025-08-29 181231.png",
+    "event_images": "https://eventdetails.blob.core.windows.net/events/a5d392f7-33e4-4d3c-8cee-8cec8b49b518_event_Screenshot 2025-08-29 185124.png",
+    "created_at": "2025-12-16T11:42:58.131587"
+  }
+]
