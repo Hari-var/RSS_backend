@@ -6,3 +6,4 @@ pydantic
 google-generativeai
 python-dotenv
 azure-storage-blob
+python-multipart
