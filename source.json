@@ -3,5 +3,18 @@
     "Microsoft AI":"https://blogs.microsoft.com/ai/feed/",
     "Microsoft":"https://learn.microsoft.com/en-us/archive/blogs/machinelearning/feed.xml",
     "Wired":"https://www.wired.com/feed/tag/ai/latest/rss",
-    "InfoQ":"https://www.infoq.com/rss/"
+    "InfoQ":"https://www.infoq.com/rss/",
+    "OpenAI": "https://openai.com/news/rss.xml",
+    "Gartner": "http://www.gartner.com/newsroom/rss",
+    "McKinsey": "https://www.mckinsey.com/insights/rss",
+    "Google": "https://blog.google/rss/",
+    "Anthropic": "https://raw.githubusercontent.com/Olshansk/rss-feeds/refs/heads/main/feeds/feed_anthropic_news.xml",
+
+    "Artemis": "https://www.artemis.bm/feed",
+    "Property Insurance Coverage Law Blog":"https://www.propertyinsurancecoveragelaw.com/feed/",
+    "Accenture Insurance Blog":"https://insuranceblog.accenture.com/feed",
+    "Allstate Newsroom": "https://www.allstatenewsroom.com/news/feed/",
+    "Texas Department of Insurance":"https://www.tdi.texas.gov/news/index.rss",
+    "Insurance Business Magazine (US)":"https://www.insurancebusinessmag.com/us/rss",
+    "Insurance Journal":"https://www.insurancejournal.com/rss/news"
 }   
