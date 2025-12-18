@@ -27,15 +27,14 @@ def health_check():
 
 @app.get("/rss-updates")
 def get_rss_updates():
+    from posts_cache import get_cached_posts
     try:
-        with open('source.json', 'r') as f:
-            sources = json.load(f)
+        updates = get_cached_posts()
+        return {"updates": updates, "count": len(updates)}
     except FileNotFoundError:
         return {"error": "source.json not found", "updates": [], "count": 0}
-    rss_feeds = list(sources.values())
-    updates = fetch_rss_feeds(rss_feeds)
-    updates.sort(key=lambda x: x['published'], reverse=True)
-    return {"updates": updates, "count": len(updates)}
+    except Exception as e:
+        return {"error": str(e), "updates": [], "count": 0}
 
 
 
@@ -48,7 +47,11 @@ def create_newsletter(request: NewsletterRequest):
     combined = []
     combined.extend([posts.model_dump() for posts in request.posts])
     combined.extend([events.model_dump() for events in request.events])
-    print("=====================================================",type(combined))
+    # Mark external events for template distinction
+    for ext_event in request.external_events:
+        ext_data = ext_event.model_dump()
+        ext_data['is_external'] = True
+        combined.append(ext_data)
     html_content = generate_newsletter(combined)
     return {"html": html_content, "status": "success"}
 
@@ -86,11 +89,22 @@ def get_events():
 # def get_event_image(filename: str):
 #     return FileResponse(f"uploads/events/{filename}")
 
+@app.get("/external-events")
+async def get_external_events(num_results: int = 10):
+    from external_events_cache import get_cached_external_events
+    events = await get_cached_external_events(num_results)
+    return {"events": events, "count": len(events)}
+
 @app.post("/send-newsletter")
 def send_newsletter_email(request: EmailRequest):
     updates = []
     updates.extend([post.model_dump() for post in request.posts])
     updates.extend([event.model_dump() for event in request.events])
+    # Mark external events for template distinction
+    for ext_event in request.external_events:
+        ext_data = ext_event.model_dump()
+        ext_data['is_external'] = True
+        updates.append(ext_data)
     html_content = generate_newsletter(updates)
     result = send_email(html_content, ["Hari.Ponnamanda@valuemomentum.com"], "Generative AI Newsletter")
     return result
