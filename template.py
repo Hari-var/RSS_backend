@@ -125,10 +125,18 @@ def generate_intro_text(updates):
 
 def create_headline_list(updates):
     html = '<p style="margin: 0 0 10px 0;"><b>In today\'s Generative AI Newsletter:</b></p>'
-    for update in updates:
+    # Sort updates: posts first, then external events, then internal events
+    sorted_updates = sorted(updates, key=lambda x: (
+        0 if 'title' in x else
+        1 if 'event_name' in x and x.get('is_external', False) else
+        2
+    ))
+    
+    for update in sorted_updates:
         # FIX: Check for 'event_name' key instead of 'Events' string
         if 'event_name' in update:
-            html += f'<div style="margin-bottom: 5px;">&bull; <b>Event:</b> {update.get("event_name", "")}</div>'
+            event_label = "External Event" if update.get('is_external') else "Event"
+            html += f'<div style="margin-bottom: 5px;">&bull; <b>{event_label}:</b> {update.get("event_name", "")}</div>'
         else:
             source = update.get("source", "Update")
             if source:
@@ -138,10 +146,18 @@ def create_headline_list(updates):
 
 def create_article_cards(updates):
     cards_html = ""
-    for update in updates:
+    # Sort updates: posts first, then external events, then internal events
+    sorted_updates = sorted(updates, key=lambda x: (
+        0 if 'title' in x else
+        1 if 'event_name' in x and x.get('is_external', False) else
+        2
+    ))
+    
+    for update in sorted_updates:
         # FIX: Check for 'event_name' to identify events
         if 'event_name' in update:
-            # --- HANDLE EVENT ---
+            # --- HANDLE EVENT (Internal or External) ---
+            is_external = update.get('is_external', False)
             title = update.get('event_name', '')
             description = f"Type: {update.get('event_type', '')}" # Events usually don't have descriptions in your JSON, using Type
             link = update.get('invite_link', '#')
@@ -170,11 +186,11 @@ def create_article_cards(updates):
             cards_html += f'''
         <tr>
             <td style="padding: 0 20px 20px 20px; background-color: #ffffff;">
-                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="border: 1px solid #e0e0e0; border-left: 4px solid #FF9800; border-radius: 4px;">
+                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="border: 1px solid #e0e0e0; border-left: 4px solid {'#9C27B0' if is_external else '#FF9800'}; border-radius: 4px;">
                     <tr>
                         <td style="padding: 15px;">
                             <h2 style="margin: 0 0 10px 0; font-family: Helvetica, Arial, sans-serif; font-size: 18px; line-height: 22px; color: #333333;">
-                                <a href="{link}" style="color: #FF9800; text-decoration: none;">{title}</a>
+                                <a href="{link}" style="color: {'#9C27B0' if is_external else '#FF9800'}; text-decoration: none;">{title}</a>
                             </h2>
                             {img_html}
                             <p style="margin: 0 0 10px 0; font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 22px; color: #555555;">{description}</p>
@@ -183,8 +199,8 @@ def create_article_cards(updates):
                             <p style="margin: 0 0 15px 0; font-family: Helvetica, Arial, sans-serif; font-size: 13px; color: #666;"><b>Location:</b> {location}</p>
                             <table role="presentation" cellspacing="0" cellpadding="0" border="0">
                                 <tr>
-                                    <td style="border-radius: 4px; background: #FF9800;">
-                                        <a href="{link}" style="background: #FF9800; font-family: Helvetica, Arial, sans-serif; font-size: 12px; font-weight: bold; color: #ffffff; text-decoration: none; padding: 8px 12px; display: block; border-radius: 4px; text-transform: uppercase;">View Event &rarr;</a>
+                                    <td style="border-radius: 4px; background: {'#9C27B0' if is_external else '#FF9800'};">
+                                        <a href="{link}" style="background: {'#9C27B0' if is_external else '#FF9800'}; font-family: Helvetica, Arial, sans-serif; font-size: 12px; font-weight: bold; color: #ffffff; text-decoration: none; padding: 8px 12px; display: block; border-radius: 4px; text-transform: uppercase;">View Event &rarr;</a>
                                     </td>
                                 </tr>
                             </table>

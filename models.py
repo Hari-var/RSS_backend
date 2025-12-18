@@ -24,7 +24,9 @@ class Post(BaseModel):
 class NewsletterRequest(BaseModel):
     posts: List[Post] = []
     events: List[Event] = []
+    external_events: List[Event] = []
 
 class EmailRequest(BaseModel):
     posts: List[Post] = []
     events: List[Event] = []
+    external_events: List[Event] = []

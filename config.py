@@ -11,3 +11,5 @@ receiver_emails = ["Hari.Ponnamanda@valuemomentum.com"]
 gemini_api_key = os.environ.get("GEMINI_API_KEY")
 MY_SAS_URL = os.environ.get("sas_url")
 CONTAINER_NAME = os.environ.get("container_name")
+eve_api_key = os.environ.get("event_api_key")
+cx = os.environ.get("CX")
