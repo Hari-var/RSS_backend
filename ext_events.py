@@ -2,7 +2,7 @@ import requests
 from datetime import datetime
 from config import eve_api_key as api_key, cx
 
-import httpx
+
 
 
 import requests
