@@ -1,16 +1,6 @@
 {
-  "timestamp": "2025-12-22T13:10:49.540500",
+  "timestamp": "2025-12-22T18:30:26.182891",
   "events": [
-    {
-      "event_name": "Welcome to Microsoft AI Tour",
-      "event_type": "Technical Conference",
-      "presenter": "Tech Industry",
-      "date_time": "2026-01-01T09:00:00Z",
-      "invite_location": "Global/Online",
-      "invite_link": "https://aitour.microsoft.com/",
-      "description": "Take the inside track to the AI frontier at the Microsoft AI Tour. Learn from experts, explore real-world strategies, and gain the insight to lead with AI.",
-      "event_images": "https://static.rainfocus.com/microsoft/global/static/staticfile/staticfile/MS_AI%20Tour_FY26_Opengraph_Microsoft%20AI%20Tour_1200x630_1755009786482001Bf39.png"
-    },
     {
       "event_name": "Microsoft Ignite",
       "event_type": "Technical Conference",
@@ -20,6 +10,16 @@
       "invite_link": "https://ignite.microsoft.com/en-US/home",
       "description": "Microsoft Ignite - Get the edge you need to drive impact in the era of AI. Bolster your knowledge, build connections, and explore emerging technologies.",
       "event_images": "https://eventtools.event.microsoft.com/ignite2025/Ignite_FY26_Ph1-Registration_OpenGraph_Title-Design_1200x630.png"
+    },
+    {
+      "event_name": "Welcome to Microsoft AI Tour",
+      "event_type": "Technical Conference",
+      "presenter": "Tech Industry",
+      "date_time": "2026-01-01T09:00:00Z",
+      "invite_location": "Global/Online",
+      "invite_link": "https://aitour.microsoft.com/",
+      "description": "Take the inside track to the AI frontier at the Microsoft AI Tour. Learn from experts, explore real-world strategies, and gain the insight to lead with AI.",
+      "event_images": "https://static.rainfocus.com/microsoft/global/static/staticfile/staticfile/MS_AI%20Tour_FY26_Opengraph_Microsoft%20AI%20Tour_1200x630_1755009786482001Bf39.png"
     },
     {
       "event_name": "India AI Impact Summit 2026",
@@ -79,7 +79,7 @@
       "invite_location": "Global/Online",
       "invite_link": "https://azure.microsoft.com/en-us/resources/events",
       "description": "Register for Azure events and webinars to learn new skills, discover new cloud computing technologies, and connect with your community.",
-      "event_images": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/124400-Hero-Background-1600x580?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=2000&hei=932&qlt=100&fit=constrain"
+      "event_images": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/124400-Events-Webinars-01-416x178?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=1000&hei=428&qlt=100&fit=constrain"
     },
     {
       "event_name": "OpenAI Can't Windsurf Anymore as Microsoft Helps Google Steal ...",
@@ -99,7 +99,7 @@
       "invite_location": "Global/Online",
       "invite_link": "https://london.theaisummit.com/",
       "description": "From the AI Curious to Model Masters, The AI Summit London is for all stages of AI adoption. Discover cutting-edge breakthroughs, real-world applications\u00a0...",
-      "event_images": "https://knect365.imgix.net/uploads/MetaMorph-AI-700ffa98d550b99628ae881b70b218b7.png?auto=format&fit=max"
+      "event_images": "https://knect365.imgix.net/uploads/Kingdom-of-the-Netherlands-258352c3c9e97db11b8f639ca294e8b2.png?auto=format&fit=max"
     }
   ]
 }
