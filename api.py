@@ -58,8 +58,8 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allows all origins
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -211,9 +211,14 @@ def delete_event(event_id: str):
 
 @app.get("/external-events")
 async def get_external_events(num_results: int = 10):
-    from external_events_cache import get_cached_external_events
-    events = await get_cached_external_events(num_results)
-    return {"events": events, "count": len(events)}
+    try:
+        from external_events_cache import get_cached_external_events
+        events = await get_cached_external_events(num_results)
+        return {"events": events, "count": len(events)}
+    except ImportError as e:
+        return {"events": [], "count": 0, "error": f"Import error: {str(e)}"}
+    except Exception as e:
+        return {"events": [], "count": 0, "error": str(e)}
 
 @app.get("/blob-images")
 def get_blob_images():
