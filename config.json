@@ -1,0 +1,11 @@
+{
+  "smtp_host": "smtp.office365.com",
+  "smtp_port": 587,
+  "smtp_user": "mvp@valuemomentum.club",
+  "sender_email": "mvp@valuemomentum.club",
+  "receiver_emails": [
+    "Hari.Ponnamanda@valuemomentum.com"
+  ],
+  "posts_cache_hours": 24,
+  "events_cache_hours": 5
+}

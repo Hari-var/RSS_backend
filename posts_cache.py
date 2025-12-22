@@ -2,6 +2,7 @@ import json
 import os
 from datetime import datetime, timedelta
 from rss_fetcher import fetch_rss_feeds
+from config import posts_cache_hours
 
 CACHE_FILE = "data/posts_cache.json"
 
@@ -18,7 +19,7 @@ def get_cached_posts():
             # Check if cache has data and timestamp
             if cache_data and 'timestamp' in cache_data and 'posts' in cache_data:
                 cache_time = datetime.fromisoformat(cache_data['timestamp'])
-                if datetime.now() - cache_time < timedelta(hours=6):
+                if datetime.now() - cache_time < timedelta(hours=posts_cache_hours):
                     return cache_data['posts']
         except (json.JSONDecodeError, KeyError, ValueError):
             pass

@@ -1,6 +1,8 @@
 fastapi
 feedparser
 uvicorn
+bcrypt
+azure-storage-blob
 gunicorn
 pydantic
 google-generativeai
