@@ -1,105 +1,105 @@
 {
-  "timestamp": "2025-12-17T15:27:18.996375",
+  "timestamp": "2025-12-22T13:10:49.540500",
   "events": [
     {
+      "event_name": "Welcome to Microsoft AI Tour",
+      "event_type": "Technical Conference",
+      "presenter": "Tech Industry",
+      "date_time": "2026-01-01T09:00:00Z",
+      "invite_location": "Global/Online",
+      "invite_link": "https://aitour.microsoft.com/",
+      "description": "Take the inside track to the AI frontier at the Microsoft AI Tour. Learn from experts, explore real-world strategies, and gain the insight to lead with AI.",
+      "event_images": "https://static.rainfocus.com/microsoft/global/static/staticfile/staticfile/MS_AI%20Tour_FY26_Opengraph_Microsoft%20AI%20Tour_1200x630_1755009786482001Bf39.png"
+    },
+    {
+      "event_name": "Microsoft Ignite",
+      "event_type": "Technical Conference",
+      "presenter": "Microsoft",
+      "date_time": "2026-01-01T09:00:00Z",
+      "invite_location": "Global/Online",
+      "invite_link": "https://ignite.microsoft.com/en-US/home",
+      "description": "Microsoft Ignite - Get the edge you need to drive impact in the era of AI. Bolster your knowledge, build connections, and explore emerging technologies.",
+      "event_images": "https://eventtools.event.microsoft.com/ignite2025/Ignite_FY26_Ph1-Registration_OpenGraph_Title-Design_1200x630.png"
+    },
+    {
       "event_name": "India AI Impact Summit 2026",
-      "event_type": "Tech Conference",
-      "presenter": "TBD",
-      "date_time": "2025-12-31T10:00:00Z",
+      "event_type": "Technical Conference",
+      "presenter": "India AI Impact Summit 2026",
+      "date_time": "2026-01-01T09:00:00Z",
       "invite_location": "India",
       "invite_link": "https://impact.indiaai.gov.in/",
       "description": "The India AI Impact Summit 2026 is a flagship global gathering hosted by the Government of India under the IndiaAI Mission, in collaboration with the\u00a0...",
       "event_images": "https://ai-impact-summit.vercel.app/og.jpeg"
     },
     {
-      "event_name": "CES - The Most Powerful Tech Event in the World",
-      "event_type": "Tech Conference",
-      "presenter": "TBD",
-      "date_time": "2025-12-31T10:00:00Z",
-      "invite_location": "India",
-      "invite_link": "https://www.ces.tech/",
-      "description": "Purchase the Deluxe Conference Pass to access ALL conference programming or purchase individual tracks with your registration. ... AI Everywhere: Inside CES 2026.",
-      "event_images": "https://www.ces.tech/media/hcdh2f21/ces_2026_website_1500x1000_blue.jpg?width=1200&height=630&bgcolor=white"
-    },
-    {
       "event_name": "AI Conference | Mar 16-19, 2026 San Jose | NVIDIA GTC",
-      "event_type": "Tech Conference",
-      "presenter": "TBD",
-      "date_time": "2025-12-31T10:00:00Z",
-      "invite_location": "India",
+      "event_type": "Technical Conference",
+      "presenter": "NVIDIAGTC",
+      "date_time": "2026-01-01T09:00:00Z",
+      "invite_location": "Global/Online",
       "invite_link": "https://www.nvidia.com/gtc/",
-      "description": "Join NVIDIA GTC 2026 in San Jose, March 16\u201319. Sign up for registration updates or explore GTC 2025 sessions on AI, robotics, healthcare, and more.",
+      "description": "NVIDIA GTC is the premier global AI conference, where developers, researchers, and business leaders come together to explore the next wave of AI innovation.",
       "event_images": "https://www.nvidia.com/content/dam/en-zz/Solutions/gtc/social-image/gtc26-web-homepage-best-of-gtc-og.jpg"
     },
     {
-      "event_name": "Home - Data + AI Summit 2025 | Databricks",
-      "event_type": "Tech Conference",
-      "presenter": "TBD",
-      "date_time": "2025-12-31T10:00:00Z",
-      "invite_location": "India",
-      "invite_link": "https://www.databricks.com/dataaisummit",
-      "description": "June 15\u201318, 2026. The premier event for the global data, analytics and AI ... India, Indonesia, Iran, Islamic Republic of, Iraq, Ireland, Isle of Man, Israel\u00a0...",
-      "event_images": ""
+      "event_name": "OpenAI Academy",
+      "event_type": "Technical Conference",
+      "presenter": "OpenAI Academy",
+      "date_time": "2026-01-01T09:00:00Z",
+      "invite_location": "Global/Online",
+      "invite_link": "https://academy.openai.com/",
+      "description": "Unlock the new opportunities of the AI era by equipping yourself with the knowledge and skills to harness artificial intelligence effectively.",
+      "event_images": "https://cdn.gradual.com/images/https://d2xo500swnpgl1.cloudfront.net/gradual/openai-academy/about-openai-academy.jpg?fit=scale-down&width=1600"
     },
     {
-      "event_name": "Adobe Summit 2025 \u2013 The Digital Experience Conference",
-      "event_type": "Tech Conference",
-      "presenter": "TBD",
-      "date_time": "2025-12-31T10:00:00Z",
+      "event_name": "Microsoft Takes on Google's Nano Banana and OpenAI's GPT ...",
+      "event_type": "Technical Conference",
+      "presenter": "Analytics India Magazine",
+      "date_time": "2026-03-13T00:00:00Z",
       "invite_location": "India",
-      "invite_link": "https://business.adobe.com/summit/adobe-summit.html",
-      "description": "Join us April 19\u201322, 2026, in Las Vegas and online to experience the power of marketing, creativity, and AI \u2014 all in one place. ... India - English\u00a0...",
-      "event_images": "https://ec-prod.scene7.com/is/image/ECPROD/new-day-2-keynote-tablet-small-306x194@2x?$pjpeg$&jpegSize=100&wid=600"
+      "invite_link": "https://analyticsindiamag.com/ai-news-updates/microsoft-takes-on-googles-nano-banana-and-openais-gpt-image-1-with-new-ai-model/",
+      "description": "Oct 14, 2025 ... Happy Llama 2026. India's Biggest AI Startup Summit March 13, 2026 | Hotel Radisson Blu, ORR / Bengaluru, India. MLDS 2026. The Largest\u00a0...",
+      "event_images": "https://analyticsindiamag.com/wp-content/uploads/2024/08/Microsoft-Azure-Crushes-Cloud-CompetitionLeaves-AWS-and-Google-Cloud-Behind-1.jpg"
     },
     {
-      "event_name": "Setting the Agenda for Global AI Governance: India to Host AI Impact ...",
-      "event_type": "Tech Conference",
-      "presenter": "TBD",
-      "date_time": "2025-12-31T10:00:00Z",
-      "invite_location": "India",
-      "invite_link": "https://www.crowell.com/en/insights/client-alerts/Setting-the-Agenda-for-Global-AI-Governance-India-to-Host-AI-Impact-Summit-in-February-2026",
-      "description": "Setting the Agenda for Global AI Governance: India to Host AI Impact Summit in February 2026 ... 2025 to inform the discourse and outcomes of the Summit.",
-      "event_images": "https://www.crowell.com/a/web/a99Z5s8LhzVghaUhcosLUG/ayZ24d/2025-8-5-setting-the-agenda.jpg"
+      "event_name": "Microsoft Events, Webinars, and Conferences",
+      "event_type": "Technical Conference",
+      "presenter": "Microsoft",
+      "date_time": "2026-01-01T09:00:00Z",
+      "invite_location": "Global/Online",
+      "invite_link": "https://www.microsoft.com/en-us/events",
+      "description": "Follow the latest technology innovations, build new skills, and connect with industry experts at a variety of Microsoft conferences, events, and webinars.",
+      "event_images": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/VP4_Homepage_Hero-Category_Background_1_2x?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=1600&hei=576&qlt=100&fmt=png-alpha&fit=constrain"
     },
     {
-      "event_name": "Google Cloud Next 2025",
-      "event_type": "Tech Conference",
-      "presenter": "TBD",
-      "date_time": "2025-12-31T10:00:00Z",
-      "invite_location": "India",
-      "invite_link": "https://cloud.withgoogle.com/next/25",
-      "description": "Join us as we keep pushing boundaries at Next 26 on April 22\u201324, 2026, at Mandalay Bay Convention Center in Las Vegas. Get started for free Check out\u00a0...",
-      "event_images": "https://storage.googleapis.com/cloudnext-assets/event-assets/25/social-share/social-share.2024-10-31.webp"
+      "event_name": "Microsoft Azure Events and Webinars | Microsoft Azure",
+      "event_type": "Technical Conference",
+      "presenter": "Microsoft",
+      "date_time": "2026-01-01T09:00:00Z",
+      "invite_location": "Global/Online",
+      "invite_link": "https://azure.microsoft.com/en-us/resources/events",
+      "description": "Register for Azure events and webinars to learn new skills, discover new cloud computing technologies, and connect with your community.",
+      "event_images": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/124400-Hero-Background-1600x580?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=2000&hei=932&qlt=100&fit=constrain"
     },
     {
-      "event_name": "AWS re:Invent 2025 | December 1 \u2013 5, 2025",
-      "event_type": "Tech Conference",
-      "presenter": "TBD",
-      "date_time": "2025-12-31T10:00:00Z",
+      "event_name": "OpenAI Can't Windsurf Anymore as Microsoft Helps Google Steal ...",
+      "event_type": "Technical Conference",
+      "presenter": "Analytics India Magazine",
+      "date_time": "2026-03-13T00:00:00Z",
       "invite_location": "India",
-      "invite_link": "https://reinvent.awsevents.com/",
-      "description": "Save the date: November 30 - December 4, 2026 | LAS VEGAS, NV \u00b7 Learn more. Best of re:Invent \u00b7 AWS Summits 2026. Attend one of our free in-person Summit events\u00a0...",
-      "event_images": "https://reinvent.awsevents.com/content/dam/reinvent/2025/media/logo/facebook-2-1080x1080.png"
+      "invite_link": "https://analyticsindiamag.com/global-tech/openai-cant-windsurf-anymore-as-microsoft-helps-google-steal-the-ceo/",
+      "description": "Jul 12, 2025 ... Happy Llama 2026. India's Biggest AI Startup Summit March 13, 2026 | Hotel Radisson Blu, ORR / Bengaluru, India. MLDS 2026. The Largest\u00a0...",
+      "event_images": "https://analyticsindiamag.com/wp-content/uploads/2025/07/windsurf.jpg"
     },
     {
-      "event_name": "Snowflake Summit 26",
-      "event_type": "Tech Conference",
-      "presenter": "TBD",
-      "date_time": "2025-12-31T10:00:00Z",
-      "invite_location": "India",
-      "invite_link": "https://www.snowflake.com/en/summit/",
-      "description": "Explore the future of data, AI, and applications at Snowflake Summit 26 ... See you next year on June 1-4, 2026, at Moscone Center. save the date. Video\u00a0...",
-      "event_images": "https://www.snowflake.com/content/dam/snowflake-site/summit/snowflake-summit-2026-yoast.png"
-    },
-    {
-      "event_name": "Red Hat Summit 2026 Homepage",
-      "event_type": "Tech Conference",
-      "presenter": "TBD",
-      "date_time": "2025-12-31T10:00:00Z",
-      "invite_location": "India",
-      "invite_link": "https://www.redhat.com/en/summit",
-      "description": "... AI, automation, emerging technologies, and more. ... Check out Red Hat TV to access keynotes, event takeaways, and customer interviews from Red Hat Summit 2025\u2014\u00a0...",
-      "event_images": "https://www.redhat.com/themes/custom/rhdc/img/red-hat-social-share.jpg"
+      "event_name": "The AI Summit London",
+      "event_type": "Technical Conference",
+      "presenter": "Tech Industry",
+      "date_time": "2026-01-01T09:00:00Z",
+      "invite_location": "Global/Online",
+      "invite_link": "https://london.theaisummit.com/",
+      "description": "From the AI Curious to Model Masters, The AI Summit London is for all stages of AI adoption. Discover cutting-edge breakthroughs, real-world applications\u00a0...",
+      "event_images": "https://knect365.imgix.net/uploads/MetaMorph-AI-700ffa98d550b99628ae881b70b218b7.png?auto=format&fit=max"
     }
   ]
 }

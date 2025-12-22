@@ -2,10 +2,11 @@ import json
 import os
 from datetime import datetime, timedelta
 from ext_events import get_ai_events_india
+from config import events_cache_hours
 
 CACHE_FILE = "data/external_events.json"
 
-async def get_cached_external_events(num_results=10):
+async def get_cached_external_events(num_results=30):
     # Ensure data directory exists
     os.makedirs("data", exist_ok=True)
     
@@ -18,7 +19,7 @@ async def get_cached_external_events(num_results=10):
             # Check if cache has data and timestamp
             if cache_data and 'timestamp' in cache_data and 'events' in cache_data:
                 cache_time = datetime.fromisoformat(cache_data['timestamp'])
-                if datetime.now() - cache_time < timedelta(hours=5):
+                if datetime.now() - cache_time < timedelta(hours=events_cache_hours):
                     return cache_data['events']
         except (json.JSONDecodeError, KeyError, ValueError):
             pass

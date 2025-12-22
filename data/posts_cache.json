@@ -1,113 +1,554 @@
 {
-  "timestamp": "2025-12-17T15:27:36.795643",
+  "timestamp": "2025-12-22T13:11:02.660686",
   "posts": [
     {
-      "id": "9ffbd8d2",
-      "title": "Article: NextGen Search - Where AI Meets OpenSearch Through MCP",
-      "description": "In this article, authors Srikanth Daggumalli and Arun Lakshmanan discuss next-generation context-aware conversational search using OpenSearch and AI agents powered by Large Language Models (LLMs) and Model Context Protocol (MCP). By Srikanth Daggumalli, Arun Lakshmanan",
+      "id": "d7b16bb6",
+      "title": "Wells Fargo Sued by Ex-Manager Who Said Bank Faked Diversity",
+      "description": "Wells Fargo &#38; Co. was sued by a former manager who says he was fired for pushing the bank to create a more diverse workforce and objecting to its practice of interviewing minority applicants for jobs that were already filled. &#8230;",
+      "image_url": "https://www.insurancejournal.com/app/uploads/2025/12/Wells-Fargo-bank-NYC-Bloomberg-580x387.jpg",
+      "link": "https://www.insurancejournal.com/news/national/2025/12/22/851865.htm",
+      "source": "News Archives - Insurance Journal",
+      "published": "2025-12-22"
+    },
+    {
+      "id": "8a60cb85",
+      "title": "Viewpoint: Artificial Intelligence Is Rewriting the Rules for Commercial Lines",
+      "description": "Commercial lines insurance is changing\u2014not with loud announcements or flashy tech demos, but through quiet, meaningful shifts in how work gets done. Much of this progress is driven by teams applying AI tools to everyday tasks. Underwriters are spending less &#8230;",
+      "image_url": "https://www.insurancejournal.com/app/uploads/2025/12/ai-siilent-revolution-AdobeStock_1366522964-580x325.jpeg",
+      "link": "https://www.insurancejournal.com/news/national/2025/12/22/851859.htm",
+      "source": "News Archives - Insurance Journal",
+      "published": "2025-12-22"
+    },
+    {
+      "id": "601da2b2",
+      "title": "Three Top P/C Insurers Account for Most of Insurance AI Patents",
+      "description": "Three property/casualty insurers have dominated the industry&#8217;s artificial intelligence patent activity since 2014. State Farm, USAA and Allstate account for 77% of all AI patents by insurers in that time, according to tracking data from Evident, an AI benchmarking and &#8230;",
+      "image_url": "https://www.insurancejournal.com/app/uploads/2024/05/AdobeStock_597459192-racing-lightbulbs-innovation-competition-edge-1-580x326.jpeg",
+      "link": "https://www.insurancejournal.com/news/national/2025/12/22/851830.htm",
+      "source": "News Archives - Insurance Journal",
+      "published": "2025-12-22"
+    },
+    {
+      "id": "5146b5c0",
+      "title": "IBM Research Introduces CUGA, an Open-Source Configurable Agent Framework on Hugging Face",
+      "description": "IBM Research has released CUGA (Configurable Generalist Agent) on Hugging Face Spaces, making its enterprise-oriented agent framework easier to evaluate with open models and real workflows. The move positions CUGA as a practical alternative to brittle, tightly coupled agent frameworks that often struggle with tool misuse, long-horizon reasoning, and recovery from failure. By Robert Krzaczy\u0144ski",
       "image_url": null,
-      "link": "https://www.infoq.com/articles/nextgen-search-ai-opensearch-mcp/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+      "link": "https://www.infoq.com/news/2025/12/ibm-cuga/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
       "source": "InfoQ",
+      "published": "2025-12-21"
+    },
+    {
+      "id": "65aa265d",
+      "title": "AWS Launches ECS Express Mode to Simplify Containerised Application Deployment",
+      "description": "AWS has released Amazon ECS Express Mode, bringing a simplified process to deploying containerised web applications and APIs. Express Mode lets users deploy production-ready services in one shot, bypassing the usual detail required around ancillary requirements such as IAM roles, load-balancers and scaling. By Matt Saunders",
+      "image_url": null,
+      "link": "https://www.infoq.com/news/2025/12/aws-ecs-express-mode/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+      "source": "InfoQ",
+      "published": "2025-12-21"
+    },
+    {
+      "id": "306679fe",
+      "title": "QConAI NY 2025 - Designing AI Platforms for Reliability: Tools for Certainty, Agents for Discovery",
+      "description": "Aaron Erickson at QCon AI NYC 2025 emphasized treating agentic AI as an engineering challenge, focusing on reliability through the blend of probabilistic and deterministic systems. He argued for clear operational structures to minimize risks and optimize performance, highlighting the importance of specialized agents and deterministic paths to enhance accuracy and control in AI workflows. By Andrew Hoblitzell",
+      "image_url": null,
+      "link": "https://www.infoq.com/news/2025/12/qcon-nvidia-platform/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+      "source": "InfoQ",
+      "published": "2025-12-21"
+    },
+    {
+      "id": "043ce356",
+      "title": "Tackling the Toxic Aftermath: Insights from United Policyholders\u2019 \u201cWildfire Smoke Damage and Your Insurance Rights\u201d Webinar",
+      "description": "As an attorney who has spent years fighting for policyholders, I\u2019ve seen how wildfire recovery has shifted from simple &#8220;char and ash&#8221; claims to a complex battle over toxic urban conflagration. I had the privilege of joining United Policyholders (UP) and a stellar panel of experts for a deep dive into the unique challenges facing&#160;&#8230; The post Tackling the Toxic Aftermath: Insights from United Policyholders&#8217; &#8220;Wildfire Smoke Damage and Your Insurance Rights&#8221; Webinar appeared first on Property Insurance Coverage Law Blog.",
+      "image_url": null,
+      "link": "https://www.propertyinsurancecoveragelaw.com/blog/tackling-the-toxic-aftermath-insights-from-united-policyholders-wildfire-smoke-damage-and-your-insurance-rights-webinar/",
+      "source": "Property Insurance Coverage Law Blog",
+      "published": "2025-12-21"
+    },
+    {
+      "id": "d5219398",
+      "title": "AWS Introduces Regional Availability for NAT Gateway",
+      "description": "AWS has recently introduced regional availability for the managed NAT Gateway service. The new capability allows developers to create a single NAT Gateway that automatically spans multiple availability zones (AZs) in a VPC, providing high availability, eliminating the need to define separate gateways and public subnets in each zone. By Renato Losio",
+      "image_url": null,
+      "link": "https://www.infoq.com/news/2025/12/aws-regional-nat-gateway/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+      "source": "InfoQ",
+      "published": "2025-12-20"
+    },
+    {
+      "id": "8e4018bb",
+      "title": "The \u201cCosmetic Damage Exclusion\u201d Won: What a Court Said About Hail-Dented Metal Roofs",
+      "description": "A federal court decision from Minnesota provides a sobering look at how cosmetic damage exclusions may be interpreted in hail-damage cases involving metal roofs. The case, Cannon Falls Area Schools, ISD 252 v. The Hanover American Insurance Company, 1 involved a dispute over whether widespread hail dents to metal school roofs constituted covered damage or&#160;&#8230; The post The \u201cCosmetic Damage Exclusion\u201d Won: What a Court Said About Hail-Dented Metal Roofs appeared first on Property Insurance Coverage Law Blog.",
+      "image_url": null,
+      "link": "https://www.propertyinsurancecoveragelaw.com/blog/the-cosmetic-damage-exclusion-won-what-a-court-said-about-hail-dented-metal-roofs/",
+      "source": "Property Insurance Coverage Law Blog",
+      "published": "2025-12-20"
+    },
+    {
+      "id": "27cc70ec",
+      "title": "Scammers in China Are Using AI-Generated Images to Get Refunds",
+      "description": "From dead crabs to shredded bed sheets, fraudsters are using fake photos and videos to get their money back from ecommerce sites.",
+      "image_url": "https://media.wired.com/photos/694344ad70e10861dcf5500d/master/pass/Made-In-China-AI-Fraud-Takes-Over-Chinese-Online-Shopping-Business-1188726758.jpg",
+      "link": "https://www.wired.com/story/scammers-in-china-are-using-ai-generated-images-to-get-refunds/",
+      "source": "Feed: Artificial Intelligence Latest",
+      "published": "2025-12-19"
+    },
+    {
+      "id": "0962cecb",
+      "title": "6 Scary Predictions for AI in 2026",
+      "description": "Could the AI industry be on the verge of its first major layoffs? Will China spread propaganda to slow the US data-center building boom? Where are AI agents headed?",
+      "image_url": "https://media.wired.com/photos/6941b33591ee19520c4c54ed/master/pass/Backchannel-2026-Predictions-Business-1454862003.jpg",
+      "link": "https://www.wired.com/story/backchannel-2026-predictions-tech-robots-ai/",
+      "source": "Feed: Artificial Intelligence Latest",
+      "published": "2025-12-19"
+    },
+    {
+      "id": "00648e5c",
+      "title": "This Chrome Extension Turns LinkedIn Posts About AI Into Facts About Allen Iverson",
+      "description": "The developers of a browser tool that changes AI-centric LinkedIn posts to Allen Iverson facts want to help \u201ctake back control of your experience of the internet.\u201d",
+      "image_url": "https://media.wired.com/photos/694312c6108a5ce71b476925/master/pass/This-Chrome-Extension-Turns-LinkedIn-Posts-About-AI%20Into%20Facts-About-Allen-Iverson-Gear-1258965952.jpg",
+      "link": "https://www.wired.com/story/chrome-extension-linkedin-allen-iverson/",
+      "source": "Feed: Artificial Intelligence Latest",
+      "published": "2025-12-19"
+    },
+    {
+      "id": "527e728c",
+      "title": "AWS Expands Well-Architected Framework with Responsible AI and Updated ML and Generative AI Lenses",
+      "description": "At AWS re:Invent 2025, AWS expanded its Well-Architected Framework with a new Responsible AI Lens and updated Machine Learning and Generative AI Lenses. The updates provide guidance on governance, bias mitigation, scalable ML workflows, and trustworthy AI system design across the full AI lifecycle. By Leela Kumili",
+      "image_url": null,
+      "link": "https://www.infoq.com/news/2025/12/aws-expands-well-architected/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+      "source": "InfoQ",
+      "published": "2025-12-19"
+    },
+    {
+      "id": "000232db",
+      "title": "QCon AI New York 2025: AI Platform Scaling at LinkedIn",
+      "description": "At QCon AI NY 2025, LinkedIn's Prince Valluri and Karthik Ramgopal unveiled an internal platform for AI agents, prioritizing execution over intelligence. By using structured specifications within a robust orchestration layer, they enhance agent observability and interoperability while ensuring human accountability. By Andrew Hoblitzell",
+      "image_url": null,
+      "link": "https://www.infoq.com/news/2025/12/qcon-ai-linkedin/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+      "source": "InfoQ",
+      "published": "2025-12-19"
+    },
+    {
+      "id": "358d3108",
+      "title": "Presentation: Lessons Learned from Shipping AI-Powered Healthcare Products",
+      "description": "Clara Matos discusses the journey of shipping AI-powered healthcare products at Sword Health. She explains how to implement input/output guardrails for regulated industries and shares a framework for robust evaluations using human and LLM-based ratings. From prompt engineering to RAG and user feedback loops, she shares a data-driven roadmap for building reliable AI care agents at scale. By Clara Matos",
+      "image_url": null,
+      "link": "https://www.infoq.com/presentations/ai-healthcare-learnings/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+      "source": "InfoQ",
+      "published": "2025-12-19"
+    },
+    {
+      "id": "6396bcac",
+      "title": "Article: Where Architects Sit in the Era of AI",
+      "description": "As AI evolves from tool to collaborator, architects must shift from manual design to meta-design. This article introduces the \"Three Loops\" framework (In, On, Out) to help navigate this transition. It explores how to balance oversight with delegation, mitigate risks like skill atrophy, and design the governance structures that keep AI-augmented systems safe and aligned with human intent. By Dave Holliday, Jo\u00e3o Carlos Gon\u00e7alves, Manoj Kumar Yadav",
+      "image_url": null,
+      "link": "https://www.infoq.com/articles/architects-ai-era/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
+      "source": "InfoQ",
+      "published": "2025-12-19"
+    },
+    {
+      "id": "1b669aba",
+      "title": "Elad Gil on the future of AI",
+      "description": "Elad Gil of Gil Capital shares his view on the state of AI, where it\u2019s going, and what\u2019s unknown.",
+      "image_url": null,
+      "link": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/elad-gil-on-the-future-of-ai",
+      "source": "McKinsey Insights & Publications",
+      "published": "2025-12-19"
+    },
+    {
+      "id": "d04d37de",
+      "title": "The athlete\u2019s mindset for digital and AI transformation",
+      "description": "AI, gen AI, and agentic AI have raised the stakes for digital transformation. Insights on how athletes train can help companies address the challenges.",
+      "image_url": null,
+      "link": "https://www.mckinsey.com/capabilities/implementation/our-insights/the-athletes-mindset-for-digital-and-ai-transformation",
+      "source": "McKinsey Insights & Publications",
+      "published": "2025-12-19"
+    },
+    {
+      "id": "98439a39",
+      "title": "Talking with Craig Saks, CEO of Bottomline",
+      "description": "The longtime business payments company seeks to transform B2B money movement and related activities, creating new revenue streams and better cashflow.",
+      "image_url": null,
+      "link": "https://www.mckinsey.com/industries/financial-services/our-insights/talking-with-craig-saks-ceo-of-bottomline",
+      "source": "McKinsey Insights & Publications",
+      "published": "2025-12-19"
+    },
+    {
+      "id": "4ca87369",
+      "title": "Accelerating Europe\u2019s AI adoption: The role of sovereign AI",
+      "description": "By playing to its strengths, the continent could create an AI ecosystem that accelerates adoption, improves global competitiveness, and reignites economic growth and prosperity.",
+      "image_url": null,
+      "link": "https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/accelerating-europes-ai-adoption-the-role-of-sovereign-ai",
+      "source": "McKinsey Insights & Publications",
+      "published": "2025-12-19"
+    },
+    {
+      "id": "7d655e4f",
+      "title": "Why we\u2019re taking legal action against SerpApi\u2019s unlawful scraping",
+      "description": "Wavy grid of lines with a small Google logo in the corner",
+      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/2a_Hero_v2.max-600x600.format-webp.webp",
+      "link": "https://blog.google/technology/safety-security/serpapi-lawsuit/",
+      "source": "The Keyword",
+      "published": "2025-12-19"
+    },
+    {
+      "id": "b3535d00",
+      "title": "Find out what\u2019s new in the Gemini app in December's Gemini Drop.",
+      "description": "Gemini Drops is our regular monthly update on how to get the most out of the Gemini app.",
+      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/00_Drops_6_Thumbnail_1280x720_1.max-600x600.format-webp.webp",
+      "link": "https://blog.google/products/gemini/gemini-drop-december-2025/",
+      "source": "The Keyword",
+      "published": "2025-12-19"
+    },
+    {
+      "id": "fcca3c90",
+      "title": "40 of our most helpful AI tips from 2025",
+      "description": "The image is a dark-themed illustration depicting three people interacting with technology, surrounded by various product icons.",
+      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AI_Tips_hero.max-600x600.format-webp.webp",
+      "link": "https://blog.google/technology/ai/ai-tips-2025/",
+      "source": "The Keyword",
+      "published": "2025-12-19"
+    },
+    {
+      "id": "8d805994",
+      "title": "10 Gemini prompts to help you keep your New Years\u2019 resolutions",
+      "description": "A hand holds a smartphone displaying the Gemini app surrounded by floating icons for reading, fitness, finance, and video learning, illustrating AI assistance for New Year's resolutions.",
+      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/NT_Gemini-New-Years-Resolution_.max-600x600.format-webp.webp",
+      "link": "https://blog.google/products/gemini/google-gemini-prompts-new-years-resolutions/",
+      "source": "The Keyword",
+      "published": "2025-12-19"
+    },
+    {
+      "id": "be23dde6",
+      "title": "5 ways AI agents will transform the way we work in 2026",
+      "description": "AI agent trends report 2026 graphic",
+      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Blog_Header_xCoMYQ5.max-600x600.format-webp.webp",
+      "link": "https://blog.google/products/google-cloud/ai-business-trends-report-2026/",
+      "source": "The Keyword",
+      "published": "2025-12-19"
+    },
+    {
+      "id": "3c61f556",
+      "title": "AI, learning and education",
+      "description": "AI stands to be a powerful force in improving learning outcomes for everyone, everywhere.",
+      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/EduCollectionHeader.max-600x600.format-webp.webp",
+      "link": "https://blog.google/outreach-initiatives/education/ai-learning-education/",
+      "source": "The Keyword",
+      "published": "2025-12-19"
+    },
+    {
+      "id": "2eb400de",
+      "title": "Sharing our compliance framework for California's Transparency in Frontier AI Act",
+      "description": "Sharing our compliance framework for California's Transparency in Frontier AI Act",
+      "image_url": null,
+      "link": "https://www.anthropic.com/news/compliance-framework-SB53",
+      "source": "Anthropic News",
+      "published": "2025-12-19"
+    },
+    {
+      "id": "9aade03c",
+      "title": "RenaissanceRe secures 100% upsized $400m Mona Lisa Re 2026-1 retro cat bond",
+      "description": "This content is copyright to www.artemis.bm and should not appear anywhere else, or an infringement has occurred. RenaissanceRe has now secured a 100% upsizing of its latest catastrophe bond, as the Mona Lisa Re Ltd. (Series 2026-1) notes have now been priced to provide it $400 million in multi-peril catastrophe retrocessional reinsurance, Artemis has learned. In addition to doubling the size of its new catastrophe bond offering, RenaissanceRe has also secured the [&#8230;] RenaissanceRe secures 100% upsized $400m Mona Lisa Re 2026-1 retro cat bond was published by: www.Artemis.bm Our catastrophe bond deal directory Sign up for our free weekly email newsletter here.",
+      "image_url": null,
+      "link": "https://www.artemis.bm/news/renaissancere-secures-100-upsized-400m-mona-lisa-re-2026-1-retro-cat-bond/?utm_source=rss&utm_medium=rss&utm_campaign=renaissancere-secures-100-upsized-400m-mona-lisa-re-2026-1-retro-cat-bond",
+      "source": "Artemis.bm \u2013 The Catastrophe Bond, Insurance Linked Securities & Investment, Reinsurance Capital, Alternative Risk Transfer and Weather Risk Management site",
+      "published": "2025-12-19"
+    },
+    {
+      "id": "eda6c5fd",
+      "title": "AIG sets up another sidecar-style syndicate at Lloyd\u2019s with Blackstone, Amwins, AI in the mix",
+      "description": "This content is copyright to www.artemis.bm and should not appear anywhere else, or an infringement has occurred. AIG has announced another special purpose vehicle launch in the Lloyd&#8217;s of London marketplace, as the insurer has partnered again with Blackstone on another sidecar-style syndicate, while this time distribution giant Amwins and artificial intelligence supplied by Palantir are also in the mix. Syndicate 2479 is the latest venture that sees AIG bringing third-party capital [&#8230;] AIG sets up another sidecar-style syndicate at Lloyd&#8217;s with Blackstone, Amwins, AI in the mix was published by: www.Artemis.bm Our catastrophe bond deal directory Sign up for our free weekly email newsletter here.",
+      "image_url": null,
+      "link": "https://www.artemis.bm/news/aig-sets-up-another-sidecar-style-syndicate-at-lloyds-with-blackstone-amwins-ai-in-the-mix/?utm_source=rss&utm_medium=rss&utm_campaign=aig-sets-up-another-sidecar-style-syndicate-at-lloyds-with-blackstone-amwins-ai-in-the-mix",
+      "source": "Artemis.bm \u2013 The Catastrophe Bond, Insurance Linked Securities & Investment, Reinsurance Capital, Alternative Risk Transfer and Weather Risk Management site",
+      "published": "2025-12-19"
+    },
+    {
+      "id": "45f8025d",
+      "title": "Claims Excellence for Whom?",
+      "description": "An insurance claims practice expert sent me a 2008 white paper this week, which prompted a lot of personal reflection worth discussing. It was published by Guidewire Software and titled \u201cAchieving Claims Excellence with Guidewire ClaimCenter.\u201d It is a polished, confident document aimed at insurance executives and claims managers. Its premise is straightforward: claims handling&#160;&#8230; The post Claims Excellence for Whom? appeared first on Property Insurance Coverage Law Blog.",
+      "image_url": null,
+      "link": "https://www.propertyinsurancecoveragelaw.com/blog/claims-excellence-for-whom/",
+      "source": "Property Insurance Coverage Law Blog",
+      "published": "2025-12-19"
+    },
+    {
+      "id": "89be49e5",
+      "title": "Son of Ponzi-Accused Georgia Building & Loan Founder Now an Insurance Agent",
+      "description": "The former co-leader of a collapsed Georgia savings and loan, a lending firm that is now the subject of state and federal Ponzi scheme investigations, has been granted an insurance producer&#8217;s license in the state. Edwin Brant Frost V, who &#8230;",
+      "image_url": "https://www.insurancejournal.com/app/uploads/2025/12/First-Liberty-AP-580x387.jpg",
+      "link": "https://www.insurancejournal.com/news/southeast/2025/12/19/851815.htm",
+      "source": "News Archives - Insurance Journal",
+      "published": "2025-12-19"
+    },
+    {
+      "id": "02f4444b",
+      "title": "AI Threatens to Displace Workers, Bank of England\u2019s Bailey Warns",
+      "description": "Artificial intelligence is likely to displace British workers even as it makes the country more productive, Bank of England Governor Andrew Bailey said in his most stark warning yet on the technology&#8217;s impact. Bailey said on Friday that the UK &#8230;",
+      "image_url": "https://www.insurancejournal.com/app/uploads/2025/12/bank-of-england-governor-andrew-bailey-bloomberg-580x387.jpg",
+      "link": "https://www.insurancejournal.com/news/international/2025/12/19/851754.htm",
+      "source": "News Archives - Insurance Journal",
+      "published": "2025-12-19"
+    },
+    {
+      "id": "838dc0a7",
+      "title": "Russia Is Trying to Overwhelm Europe With its Sabotage Campaign: Western Officials",
+      "description": "In November, a train carrying almost 500 people came to a sudden halt in eastern Poland. A broken overhead line had smashed several windows, and the track ahead was damaged. Elsewhere on the line, explosives detonated under a passing freight &#8230;",
+      "image_url": "https://www.insurancejournal.com/app/uploads/2025/12/damage-to-east-london-warehouse-storing-ukraine-goods-AP-580x404.jpg",
+      "link": "https://www.insurancejournal.com/news/international/2025/12/19/851745.htm",
+      "source": "News Archives - Insurance Journal",
+      "published": "2025-12-19"
+    },
+    {
+      "id": "8c5b53d7",
+      "title": "UPS Ripped Off Seasonal Workers With Unfair Pay Practices, Lawsuit Alleges",
+      "description": "UPS stole tens of millions of dollars in pay from seasonal workers who help the shipping giant deliver packages during the busy holiday season, forcing some to clock in well after their shifts started and deducting pay for lunch breaks &#8230;",
+      "image_url": "https://www.insurancejournal.com/app/uploads/2024/11/UPS-truck-AdobeStock-580x435.jpeg",
+      "link": "https://www.insurancejournal.com/news/national/2025/12/19/851686.htm",
+      "source": "News Archives - Insurance Journal",
+      "published": "2025-12-19"
+    },
+    {
+      "id": "0068d4f8",
+      "title": "X Corp. Sues Virginia Social Media Startup Over Bid to Claim \u2018Twitter\u2019 Brand",
+      "description": "Elon Musk&#8217;s X Corp. sued a startup on Tuesday after it sought to cancel X&#8217;s Twitter trademarks so it can &#8220;bring Twitter back&#8221; as a new social media platform. X said in the lawsuit in Delaware federal court that its &#8230;",
+      "image_url": "https://www.insurancejournal.com/app/uploads/2023/01/Twitter-litigation-Bigstock-580x387.jpg",
+      "link": "https://www.insurancejournal.com/news/east/2025/12/19/851509.htm",
+      "source": "News Archives - Insurance Journal",
+      "published": "2025-12-19"
+    },
+    {
+      "id": "8563c1d4",
+      "title": "Contractor Again Exposed Workers to Cave-In, Excavation Hazards: OSHA",
+      "description": "The Occupational Safety and Health Administration reported that it has again cited an Easton, Connecticut concrete and earthwork contractor for willfully failing to protect workers from cave-in and excavation hazards OSHA has proposed more than $1.2 million in fines after &#8230;",
+      "image_url": null,
+      "link": "https://www.insurancejournal.com/news/east/2025/12/19/851494.htm",
+      "source": "News Archives - Insurance Journal",
+      "published": "2025-12-19"
+    },
+    {
+      "id": "89f9c203",
+      "title": "NVIDIA, US Government to Boost AI Infrastructure and R&D Investments Through Landmark Genesis Mission",
+      "description": "NVIDIA will join the U.S. Department of Energy\u2019s (DOE) Genesis Mission as a private industry partner to keep U.S. AI both the leader and the standard in technology around the world. The Genesis Mission, which is part of an Executive Order recently signed by President Trump, aims to redefine American leadership in AI across three Read Article",
+      "image_url": "https://blogs.nvidia.com/wp-content/uploads/2025/09/nvidiaheadquarters-842x450.jpg",
+      "link": "https://blogs.nvidia.com/blog/nvidia-us-government-to-boost-ai-infrastructure-and-rd-investments/",
+      "source": "NVIDIA Blog",
+      "published": "2025-12-18"
+    },
+    {
+      "id": "f6ae4e1e",
+      "title": "Now Generally Available, NVIDIA RTX PRO 5000 72GB Blackwell GPU Expands Memory Options for Desktop Agentic AI",
+      "description": "The NVIDIA RTX PRO 5000 72GB Blackwell GPU is now generally available, bringing robust agentic and generative AI capabilities powered by the NVIDIA Blackwell architecture to more desktops and professionals across the world.",
+      "image_url": "https://blogs.nvidia.com/wp-content/uploads/2025/12/rtx-pro-5000-workstation-1280x680-1-842x450.jpg",
+      "link": "https://blogs.nvidia.com/blog/rtx-pro-5000-72gb-blackwell-gpu/",
+      "source": "NVIDIA Blog",
+      "published": "2025-12-18"
+    },
+    {
+      "id": "425197dd",
+      "title": "The Ultra-Realistic AI Face Swapping Platform Driving Romance Scams",
+      "description": "Capable of creating \u201cnearly perfect\u201d face swaps during live video chats, Haotian has made millions, mainly via Telegram. But its main channel vanished after WIRED's inquiry into scammers using the app.",
+      "image_url": "https://media.wired.com/photos/6941b2b7df7648d0f38774bb/master/pass/sec-ai-faceswap-app-1382901144.jpg",
+      "link": "https://www.wired.com/story/the-ultra-realistic-ai-face-swapping-platform-driving-romance-scams/",
+      "source": "Feed: Artificial Intelligence Latest",
+      "published": "2025-12-18"
+    },
+    {
+      "id": "90219343",
+      "title": "Evaluating chain-of-thought monitorability",
+      "description": "OpenAI introduces a new framework and evaluation suite for chain-of-thought monitorability, covering 13 evaluations across 24 environments. Our findings show that monitoring a model\u2019s internal reasoning is far more effective than monitoring outputs alone, offering a promising path toward scalable control as AI systems grow more capable.",
+      "image_url": null,
+      "link": "https://openai.com/index/evaluating-chain-of-thought-monitorability",
+      "source": "OpenAI News",
+      "published": "2025-12-18"
+    },
+    {
+      "id": "09051a2a",
+      "title": "AI literacy resources for teens and parents",
+      "description": "OpenAI shares new AI literacy resources to help teens and parents use ChatGPT thoughtfully, safely, and with confidence. The guides include expert-vetted tips for responsible use, critical thinking, healthy boundaries, and supporting teens through emotional or sensitive topics.",
+      "image_url": null,
+      "link": "https://openai.com/index/ai-literacy-resources-for-teens-and-parents",
+      "source": "OpenAI News",
+      "published": "2025-12-18"
+    },
+    {
+      "id": "6f838e99",
+      "title": "Introducing GPT-5.2-Codex",
+      "description": "GPT-5.2-Codex is OpenAI\u2019s most advanced coding model, offering long-horizon reasoning, large-scale code transformations, and enhanced cybersecurity capabilities.",
+      "image_url": null,
+      "link": "https://openai.com/index/introducing-gpt-5-2-codex",
+      "source": "OpenAI News",
+      "published": "2025-12-18"
+    },
+    {
+      "id": "93704cac",
+      "title": "Addendum to GPT-5.2 System Card: GPT-5.2-Codex",
+      "description": "This system card outlines the comprehensive safety measures implemented for GPT\u20115.2-Codex. It details both model-level mitigations, such as specialized safety training for harmful tasks and prompt injections, and product-level mitigations like agent sandboxing and configurable network access.",
+      "image_url": null,
+      "link": "https://openai.com/index/gpt-5-2-codex-system-card",
+      "source": "OpenAI News",
+      "published": "2025-12-18"
+    },
+    {
+      "id": "748dc3ec",
+      "title": "Introducing GPT-5.2-Codex",
+      "description": "GPT-5.2-Codex is OpenAI\u2019s most advanced coding model, offering long-horizon reasoning, large-scale code transformations, and enhanced cybersecurity capabilities.",
+      "image_url": null,
+      "link": "https://openai.com/index/gpt-5-2-codex",
+      "source": "OpenAI News",
+      "published": "2025-12-18"
+    },
+    {
+      "id": "b857ab28",
+      "title": "Organize your insights with Data Tables in NotebookLM.",
+      "description": "Valuable information is rarely neat. Key facts are often scattered, making manual compilation tedious.Today, we\u2019re making that simpler with Data Tables. NotebookLM now s\u2026",
+      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/2_Customization.max-600x600.format-webp.webp",
+      "link": "https://blog.google/technology/google-labs/notebooklm-data-tables/",
+      "source": "The Keyword",
+      "published": "2025-12-18"
+    },
+    {
+      "id": "f4ced481",
+      "title": "You can now verify Google AI-generated videos in the Gemini app.",
+      "description": "We\u2019re expanding our content transparency tools to help you more easily identify AI-generated content. You can now check if a video was edited or created with Google AI d\u2026",
+      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/SynthID_Social.max-600x600.format-webp.webp",
+      "link": "https://blog.google/technology/ai/verify-google-ai-videos-gemini-app/",
+      "source": "The Keyword",
+      "published": "2025-12-18"
+    },
+    {
+      "id": "0832e6d7",
+      "title": "Inside Kaggle's AI Agents intensive course with Google",
+      "description": "Illustration of a developer participating in the Kaggle AI Agents Intensive, sitting with their laptop with Kaggle and Google logos.",
+      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/kaggle_AI_intensive_hero.max-600x600.format-webp.webp",
+      "link": "https://blog.google/technology/developers/ai-agents-intensive-recap/",
+      "source": "The Keyword",
+      "published": "2025-12-18"
+    },
+    {
+      "id": "d44ae899",
+      "title": "Watch a podcast discussion about Gemini 3 and the future of Search.",
+      "description": "Learn how Gemini 3 powers Google Search with Generative UI, Nano Banana, and interactive graphics.",
+      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Release_Notes_Sundar_Pichai_003.max-600x600.format-webp.webp",
+      "link": "https://blog.google/technology/ai/release-notes-podcast-search/",
+      "source": "The Keyword",
+      "published": "2025-12-18"
+    },
+    {
+      "id": "1decf479",
+      "title": "Cat bonds, physical risk insurance a top climate adaptation investment theme: Morgan Stanley",
+      "description": "This content is copyright to www.artemis.bm and should not appear anywhere else, or an infringement has occurred. Morgan Stanley recently surveyed over 900 institutional investors to understand their current thoughts on sustainable investments. With climate adaptation and resilience growing in prominence as themes, investors cited catastrophe bonds and physical risk insurance contracts among their top picks. Most institutional investors maintain a positive outlook for sustainable investments, with 84% of those surveyed saying [&#8230;] Cat bonds, physical risk insurance a top climate adaptation investment theme: Morgan Stanley was published by: www.Artemis.bm Our catastrophe bond deal directory Sign up for our free weekly email newsletter here.",
+      "image_url": null,
+      "link": "https://www.artemis.bm/news/cat-bonds-physical-risk-insurance-a-top-climate-adaptation-investment-theme-morgan-stanley/?utm_source=rss&utm_medium=rss&utm_campaign=cat-bonds-physical-risk-insurance-a-top-climate-adaptation-investment-theme-morgan-stanley",
+      "source": "Artemis.bm \u2013 The Catastrophe Bond, Insurance Linked Securities & Investment, Reinsurance Capital, Alternative Risk Transfer and Weather Risk Management site",
+      "published": "2025-12-18"
+    },
+    {
+      "id": "b3184cea",
+      "title": "Into the Omniverse: OpenUSD and NVIDIA Halos Accelerate Safety for Robotaxis, Physical AI Systems",
+      "description": "Physical AI is moving from research labs into the real world, powering intelligent robots and autonomous vehicles (AVs) \u2014 such as robotaxis \u2014 that must reliably sense, reason and act amid unpredictable conditions.",
+      "image_url": "https://blogs.nvidia.com/wp-content/uploads/2025/12/dec-ito-open-usd-halos-robotaxi-physical-ai-842x450.png",
+      "link": "https://blogs.nvidia.com/blog/openusd-halos-safety-robotaxi-physical-ai/",
+      "source": "NVIDIA Blog",
       "published": "2025-12-17"
     },
     {
-      "id": "5b617273",
-      "title": "TornadoVM 2.0 Brings Automatic GPU Acceleration and LLM support to Java",
-      "description": "The TornadoVM project recently reached version 2.0, a major milestone for the open-source project that aims to provide a heterogeneous hardware runtime for Java. The project automatically accelerates Java programs on multi-core CPUs, GPUs, and FPGAs. This release is likely to be of particular interest to teams developing LLM solutions on the JVM. By Ben Evans",
-      "image_url": null,
-      "link": "https://www.infoq.com/news/2025/12/tornadovm-20-gpu-llm/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
-      "source": "InfoQ",
+      "id": "216f3b5f",
+      "title": "UC San Diego Lab Advances Generative AI Research With NVIDIA DGX B200 System",
+      "description": "The Hao AI Lab research team at the University of California San Diego \u2014 at the forefront of pioneering AI model innovation \u2014 recently received an NVIDIA DGX B200 system to elevate their critical work in large language model inference. Many LLM inference platforms in production today, such as NVIDIA Dynamo, use research concepts that Read Article",
+      "image_url": "https://blogs.nvidia.com/wp-content/uploads/2025/12/ucsd_feature_image_sized_720.jpg",
+      "link": "https://blogs.nvidia.com/blog/ucsd-generative-ai-research-dgx-b200/",
+      "source": "NVIDIA Blog",
       "published": "2025-12-17"
     },
     {
-      "id": "5348f900",
-      "title": "Build interactive mini apps with Opal in the Gemini app.",
-      "description": "Opal \u2014 our tool for building AI-powered mini apps \u2014 is now directly available in the Gemini web app as a way to create experimental Gems. You can find it in your Gems ma\u2026",
-      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Opal-lite_for_Gemini_Launch.max-600x600.format-webp.webp",
-      "link": "https://blog.google/technology/google-labs/mini-apps-opal-gemini-app-experiment/",
+      "id": "66798735",
+      "title": "\u2018Wicked\u2019 Director Jon M. Chu on \u2018What Makes Art Beautiful\u2019 in the AI Era",
+      "description": "In this episode of Uncanny Valley, we bring you our conversation with Jon M. Chu from WIRED\u2019s Big Interview event, fresh on the heels of directing Wicked: For Good.",
+      "image_url": "https://media.wired.com/photos/69407fa27e1bd64b844c6136/master/pass/Uncanny-Valley-Jon-Chu-Culture-2249988378.jpg",
+      "link": "https://www.wired.com/story/uncanny-valley-podcast-wicked-director-jon-m-chu/",
+      "source": "Feed: Artificial Intelligence Latest",
+      "published": "2025-12-17"
+    },
+    {
+      "id": "c703ec8b",
+      "title": "People Are Paying to Get Their Chatbots High on \u2018Drugs\u2019",
+      "description": "An online marketplace is selling code modules that simulate the effects of cannabis, ketamine, cocaine, ayahuasca, and alcohol when they are uploaded to ChatGPT.",
+      "image_url": "https://media.wired.com/photos/690aaafb43f5b613c5d84033/master/pass/culture_chatbot_drugs.gif",
+      "link": "https://www.wired.com/story/people-are-paying-to-get-their-chatbots-high-on-drugs/",
+      "source": "Feed: Artificial Intelligence Latest",
+      "published": "2025-12-17"
+    },
+    {
+      "id": "b957d374",
+      "title": "Introducing OpenAI Academy for News Organizations",
+      "description": "OpenAI is launching the OpenAI Academy for News Organizations, a new learning hub built with the American Journalism Project and The Lenfest Institute to help newsrooms use AI effectively. The Academy offers training, practical use cases, and responsible-use guidance to support journalists, editors, and publishers as they adopt AI in their reporting and operations.",
+      "image_url": null,
+      "link": "https://openai.com/index/openai-academy-for-news-organizations",
+      "source": "OpenAI News",
+      "published": "2025-12-17"
+    },
+    {
+      "id": "e55a8b42",
+      "title": "Developers can now submit apps to ChatGPT",
+      "description": "Developers can now submit apps for review and publication in ChatGPT, with approved apps appearing in a new in-product directory for easy discovery. Updated tools, guidelines, and the Apps SDK help developers build powerful chat-native experiences that bring real-world actions into ChatGPT.",
+      "image_url": null,
+      "link": "https://openai.com/index/developers-can-now-submit-apps-to-chatgpt",
+      "source": "OpenAI News",
+      "published": "2025-12-17"
+    },
+    {
+      "id": "3a7bb6de",
+      "title": "The next big shifts in AI workloads and hyperscaler strategies",
+      "description": "AI workloads are reshaping data center economics, power planning, and leasing decisions. Their influence is already evident across most new builds and will only intensify in the coming years.",
+      "image_url": null,
+      "link": "https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-next-big-shifts-in-ai-workloads-and-hyperscaler-strategies",
+      "source": "McKinsey Insights & Publications",
+      "published": "2025-12-17"
+    },
+    {
+      "id": "05f605e6",
+      "title": "Reimagining the value proposition of tech services for agentic AI",
+      "description": "As enterprise customers seek support with agentic AI, tech services providers have a chance to turn a potential threat into an even bigger opportunity.",
+      "image_url": null,
+      "link": "https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/reimagining-the-value-proposition-of-tech-services-for-agentic-ai",
+      "source": "McKinsey Insights & Publications",
+      "published": "2025-12-17"
+    },
+    {
+      "id": "c9b5bca3",
+      "title": "Gemini 3 Flash comes to the Gemini app",
+      "description": "Introducing Gemini 3 Flash, a major upgrade to your everyday AI. It delivers next-generation intelligence at lightning speeds.For too long, AI forced a choice: big model\u2026",
+      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini3_Flash_Food_Thumbnail.max-600x600.format-webp.webp",
+      "link": "https://blog.google/products/gemini/gemini-3-flash-gemini-app/",
       "source": "The Keyword",
       "published": "2025-12-17"
     },
     {
-      "id": "18e70c44",
-      "title": "Groupama gets upsized \u20ac120m convective storm reinsurance with Quercus II Re cat bond",
-      "description": "This content is copyright to www.artemis.bm and should not appear anywhere else, or an infringement has occurred. Groupama, the French mutual insurance and reinsurance company, has now priced its new Quercus II Re DAC catastrophe bond to secure the 20% upsized target of \u20ac120 million of fully-collateralized convective storm reinsurance protection from the capital markets with this deal, Artemis can report. Groupama returned to the catastrophe bond market in November, with its [&#8230;] Groupama gets upsized \u20ac120m convective storm reinsurance with Quercus II Re cat bond was published by: www.Artemis.bm Our catastrophe bond deal directory Sign up for our free weekly email newsletter here.",
-      "image_url": null,
-      "link": "https://www.artemis.bm/news/groupama-gets-upsized-e120m-convective-storm-reinsurance-with-quercus-ii-re-cat-bond/?utm_source=rss&utm_medium=rss&utm_campaign=groupama-gets-upsized-e120m-convective-storm-reinsurance-with-quercus-ii-re-cat-bond",
-      "source": "Artemis.bm \u2013 The Catastrophe Bond, Insurance Linked Securities & Investment, Reinsurance Capital, Alternative Risk Transfer and Weather Risk Management site",
+      "id": "4a53842c",
+      "title": "Gemini 3 Flash is rolling out globally in Google Search",
+      "description": "Gemini 3 Flash in Google Search",
+      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Blog_header_2.max-600x600.format-webp.webp",
+      "link": "https://blog.google/products/search/google-ai-mode-update-gemini-3-flash/",
+      "source": "The Keyword",
       "published": "2025-12-17"
     },
     {
-      "id": "1371b8dd",
-      "title": "Spain Swine Fever Outbreak Grows With 10 New Wild Boar Deaths",
-      "description": "Spain reported 10 new cases of wild boar deaths from African swine fever, expanding an outbreak that has put the major pork exporter into high alert. The dead animals, which bring the total count to 26 since the outbreak emerged &#8230;",
-      "image_url": "https://www.insurancejournal.com/app/uploads/2025/12/spain-is-one-of-worlds-top-pork-exporters-bloomberg-580x347.jpg",
-      "link": "https://www.insurancejournal.com/news/international/2025/12/17/851291.htm",
-      "source": "News Archives - Insurance Journal",
+      "id": "b6a3a2c1",
+      "title": "Gemini 3 Flash: frontier intelligence built for speed",
+      "description": "Gemini 3 Flash text",
+      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3_flash_model_blog_heade.max-600x600.format-webp.webp",
+      "link": "https://blog.google/products/gemini/gemini-3-flash/",
+      "source": "The Keyword",
       "published": "2025-12-17"
     },
     {
-      "id": "0a00d80a",
-      "title": "Hacking Group \u2018ShinyHunters\u2019 Claims Theft of Data From Users of Pornhub",
-      "description": "The hacking group &#8220;ShinyHunters&#8221; said on Tuesday it has stolen data belonging to premium customers of the leading sex website Pornhub and is threatening to publish it. Although Reuters could not immediately establish the scope, scale, or details of the &#8230;",
-      "image_url": "https://www.insurancejournal.com/app/uploads/2024/04/security-breach-concept-with-open-padlock-328964197-bigstock-580x326.jpg",
-      "link": "https://www.insurancejournal.com/news/national/2025/12/17/851368.htm",
-      "source": "News Archives - Insurance Journal",
+      "id": "be63306b",
+      "title": "Build with Gemini 3 Flash, frontier intelligence that scales with you",
+      "description": "Gemini 3 Flash",
+      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3-Flash_developer_header.max-600x600.format-webp.webp",
+      "link": "https://blog.google/technology/developers/build-with-gemini-3-flash/",
+      "source": "The Keyword",
       "published": "2025-12-17"
-    },
-    {
-      "id": "c0782b13",
-      "title": "Hyundai, Kia Agree to Retrofit 7 Million Vehicles to Address Theft Concerns",
-      "description": "Korean automakers Hyundai and Kia agreed to retrofit 7 million U.S. vehicles to address theft concerns and install prevention equipment on all new vehicles to resolve an investigation by a bipartisan coalition of 35 attorneys general. The state attorneys general &#8230;",
-      "image_url": "https://www.insurancejournal.com/app/uploads/2024/11/Hyundai-dealer-AdobeStock_-580x387.jpeg",
-      "link": "https://www.insurancejournal.com/news/national/2025/12/17/851365.htm",
-      "source": "News Archives - Insurance Journal",
-      "published": "2025-12-17"
-    },
-    {
-      "id": "7a269690",
-      "title": "OpenAI Rolls Back ChatGPT\u2019s Model Router System for Most Users",
-      "description": "As OpenAI scrambles to improve ChatGPT, it's ditching a feature in its free tier that contributed to last summer's user revolt.",
-      "image_url": "https://media.wired.com/photos/6940568e6f1488718f54b69a/master/pass/Model-Behavior-Why-OpenAI-Killed-the-Model-Router-in-GPT-5-2218344204.jpg",
-      "link": "https://www.wired.com/story/openai-router-relaunch-gpt-5-sam-altman/",
-      "source": "Feed: Artificial Intelligence Latest",
-      "published": "2025-12-16"
-    },
-    {
-      "id": "303327ae",
-      "title": "OpenAI\u2019s Chief Communications Officer Is Leaving the Company",
-      "description": "Hannah Wong told staff she is moving on to her \u201cnext chapter.\u201d The company will be running an executive search to find a replacement, according to a memo.",
-      "image_url": "https://media.wired.com/photos/69409cfc0b71868f273ffce7/master/pass/OpenAI-Loses-Chief-Communications-Officer-Business-2218358100.jpg",
-      "link": "https://www.wired.com/story/openai-chief-communications-officer-hannah-wong-leaves/",
-      "source": "Feed: Artificial Intelligence Latest",
-      "published": "2025-12-16"
-    },
-    {
-      "id": "0f3dba68",
-      "title": "Transformers v5 Introduces a More Modular and Interoperable Core",
-      "description": "Hugging Face has released the first candidate for Transformers v5, marking a significant evolution from v4 five years ago. The library has grown from a specialized model toolkit to a critical resource in AI development, achieving over three million installations daily and more than 1.2 billion total installs. By Robert Krzaczy\u0144ski",
-      "image_url": null,
-      "link": "https://www.infoq.com/news/2025/12/transformers-hugging-face/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
-      "source": "InfoQ",
-      "published": "2025-12-16"
-    },
-    {
-      "id": "d9c7a69f",
-      "title": "Meta's Optimization Platform Ax 1.0 Streamlines LLM and System Optimization",
-      "description": "Now stable, Ax is an open-source platform from Meta designed to help researchers and engineers apply machine learning to complex, resource-intensive experimentation. Over the past several years, Meta has used Ax to improve AI models, accelerate machine learning research, tune production infrastructure, and more. By Sergio De Simone",
-      "image_url": null,
-      "link": "https://www.infoq.com/news/2025/12/ax-hyperparameter-optimization/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
-      "source": "InfoQ",
-      "published": "2025-12-16"
-    },
-    {
-      "id": "0f3b8d0f",
-      "title": "Article: Trustworthy Productivity: Securing AI Accelerated Development",
-      "description": "Autonomous AI agents amplify productivity but can cause severe damage without safeguards. Defend the ReAct loop\u2014context, reasoning, and tools\u2014through provenance gates, planner-critic separation, scoped credentials, sandboxed code, and STRIDE/MAESTRO threat modeling. With robust logging, bounded autonomy, and red-teaming, agents can deliver trustworthy productivity while minimizing risk. By Sriram Madapusi Vasudevan",
-      "image_url": null,
-      "link": "https://www.infoq.com/articles/secure-ai-development/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
-      "source": "InfoQ",
-      "published": "2025-12-16"
     },
     {
       "id": "6a8ad262",
@@ -146,141 +587,6 @@
       "published": "2025-12-16"
     },
     {
-      "id": "6af7a8c9",
-      "title": "Help boost your daily productivity with CC, a new experimental AI agent from Google Labs.",
-      "description": "CC is our new experimental AI productivity agent from Google Labs, built with Gemini to help you stay organized and get things done. When you sign up, it connects your G\u2026",
-      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/CC_Keyword_01_1.max-600x600.format-webp.webp",
-      "link": "https://blog.google/technology/google-labs/cc-ai-agent/",
-      "source": "The Keyword",
-      "published": "2025-12-16"
-    },
-    {
-      "id": "05e20c20",
-      "title": "Preferred Sources in Top Stories is now available in English to all users around the world.",
-      "description": "Preferred Sources in Top Stories has expanded globally: it's now available for English-language users worldwide, and we\u2019ll roll it out to all supported languages early n\u2026",
-      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Preferred_Sources_2b2fgHS.max-600x600.format-webp.webp",
-      "link": "https://blog.google/feed/preferred-sources-expands/",
-      "source": "The Keyword",
-      "published": "2025-12-16"
-    },
-    {
-      "id": "75a5dd5e",
-      "title": "Reinsurance supply and demand to favor buyers in 2026: Moody\u2019s Ratings",
-      "description": "This content is copyright to www.artemis.bm and should not appear anywhere else, or an infringement has occurred. Moody&#8217;s Ratings forecasts that property catastrophe reinsurance pricing will likely fall around 15% over the coming year, as elevated capital levels result in a supply-demand dynamic that favors buyers of protection. Commenting on the state of the market after a relatively benign, in insured loss terms, Atlantic hurricane season, Moody&#8217;s Ratings notes that demand for [&#8230;] Reinsurance supply and demand to favor buyers in 2026: Moody&#8217;s Ratings was published by: www.Artemis.bm Our catastrophe bond deal directory Sign up for our free weekly email newsletter here.",
-      "image_url": null,
-      "link": "https://www.artemis.bm/news/reinsurance-supply-and-demand-to-favor-buyers-in-2026-moodys-ratings/?utm_source=rss&utm_medium=rss&utm_campaign=reinsurance-supply-and-demand-to-favor-buyers-in-2026-moodys-ratings",
-      "source": "Artemis.bm \u2013 The Catastrophe Bond, Insurance Linked Securities & Investment, Reinsurance Capital, Alternative Risk Transfer and Weather Risk Management site",
-      "published": "2025-12-16"
-    },
-    {
-      "id": "0ea473be",
-      "title": "144A property cat bonds hit $20.7bn YTD in 2025, as record FAIR Plan wildfire cat bond settles",
-      "description": "This content is copyright to www.artemis.bm and should not appear anywhere else, or an infringement has occurred. Issuance of Rule 144A property catastrophe bonds in 2025 surpassed the $20 billion milestone today as the settlement of the largest wildfire cat bond ever seen, sponsored by the California FAIR Plan, has taken the total for the year-to-date to just over $20.7 billion, Artemis data shows. Full Rule 144A property catastrophe bonds, so those [&#8230;] 144A property cat bonds hit $20.7bn YTD in 2025, as record FAIR Plan wildfire cat bond settles was published by: www.Artemis.bm Our catastrophe bond deal directory Sign up for our free weekly email newsletter here.",
-      "image_url": null,
-      "link": "https://www.artemis.bm/news/144a-property-cat-bonds-hit-20-7bn-ytd-in-2025-as-record-fair-plan-wildfire-cat-bond-settles/?utm_source=rss&utm_medium=rss&utm_campaign=144a-property-cat-bonds-hit-20-7bn-ytd-in-2025-as-record-fair-plan-wildfire-cat-bond-settles",
-      "source": "Artemis.bm \u2013 The Catastrophe Bond, Insurance Linked Securities & Investment, Reinsurance Capital, Alternative Risk Transfer and Weather Risk Management site",
-      "published": "2025-12-16"
-    },
-    {
-      "id": "8afc43b3",
-      "title": "Alternative capital, captives to continue shaping specialty re/insurance in 2026: Antares Global CEO",
-      "description": "This content is copyright to www.artemis.bm and should not appear anywhere else, or an infringement has occurred. Looking ahead to 2026, Michael van der Straaten, CEO of Antares Global, a London-based specialty re/insurer, outlined that the company is projecting that alternative capital, captives, and new structures will continue to play a key role towards shaping the specialty re/insurance market throughout next year. The CEO noted that this marks a critical time for [&#8230;] Alternative capital, captives to continue shaping specialty re/insurance in 2026: Antares Global CEO was published by: www.Artemis.bm Our catastrophe bond deal directory Sign up for our free weekly email newsletter here.",
-      "image_url": null,
-      "link": "https://www.artemis.bm/news/alternative-capital-captives-shape-specialty-reinsurance-2026-antares-global-ceo/?utm_source=rss&utm_medium=rss&utm_campaign=alternative-capital-captives-shape-specialty-reinsurance-2026-antares-global-ceo",
-      "source": "Artemis.bm \u2013 The Catastrophe Bond, Insurance Linked Securities & Investment, Reinsurance Capital, Alternative Risk Transfer and Weather Risk Management site",
-      "published": "2025-12-16"
-    },
-    {
-      "id": "82b78786",
-      "title": "Confie Acquires Texas\u2019 TGS Insurance Agency",
-      "description": "Confie announced the acquisition of TGS Insurance Agency, Inc., a Houston, Texas-based standard personal lines insurance agency. The acquisition advances Confie&#8217;s strategy to scale InsureOne into a leading national platform serving standard personal lines and small commercial customers. Founded in &#8230;",
-      "image_url": null,
-      "link": "https://www.insurancejournal.com/news/southcentral/2025/12/16/851373.htm",
-      "source": "News Archives - Insurance Journal",
-      "published": "2025-12-16"
-    },
-    {
-      "id": "2dd9df21",
-      "title": "World Insurance Associates Acquires SilverLeaf Insurance in Arizona",
-      "description": "World Insurance Associates LLC acquired the business of SilverLeaf Insurance Group in Scottsdale, Arizona. SilverLeaf was established in 2009. It offers business, health, life and personal insurance lines to clients in multiple states across the nation. World Insurance Associates is &#8230;",
-      "image_url": null,
-      "link": "https://www.insurancejournal.com/news/west/2025/12/16/851348.htm",
-      "source": "News Archives - Insurance Journal",
-      "published": "2025-12-16"
-    },
-    {
-      "id": "b4d45dc7",
-      "title": "Trucordia Acquires Global Financial & Insurance Services",
-      "description": "Trucordia, a U.S. insurance brokerage, today announced its acquisition of Global Financial &#38; Insurance Services, an insurance and financial services business based in Irving, Texas. The business has a presence in Dallas, Fort Worth, Houston and Los Angeles and serves &#8230;",
-      "image_url": null,
-      "link": "https://www.insurancejournal.com/news/southcentral/2025/12/16/851325.htm",
-      "source": "News Archives - Insurance Journal",
-      "published": "2025-12-16"
-    },
-    {
-      "id": "68ba548e",
-      "title": "Florida Reps Aim to End Private Flood Coverage Penalty With Bill in Congress",
-      "description": "Mortgagees required to purchase flood insurance can utilize private flood policies, under federal rules that took effect in 2019. But if they go that route, the property owners risk losing lower, grandfathered premiums if they ever return to the National &#8230;",
-      "image_url": "https://www.insurancejournal.com/app/uploads/2022/11/Hi-res-Citizens-flood-pic-580x453.jpg",
-      "link": "https://www.insurancejournal.com/news/southeast/2025/12/16/851313.htm",
-      "source": "News Archives - Insurance Journal",
-      "published": "2025-12-16"
-    },
-    {
-      "id": "b869279e",
-      "title": "AIG Appoints Clifford From Everest as CEO, International Commercial Insurance",
-      "description": "AIG Appoints Clifford From Everest as CEO, International Commercial Insurance American International Group (AIG) announced that Adam Clifford has been appointed chief executive officer, International Commercial Insurance, effective January 5, 2026. In this role, Clifford will lead AIG&#8217;s International Commercial &#8230;",
-      "image_url": "https://www.insurancejournal.com/app/uploads/2020/11/american-international-group-logo-580x314.jpg",
-      "link": "https://www.insurancejournal.com/news/international/2025/12/16/851306.htm",
-      "source": "News Archives - Insurance Journal",
-      "published": "2025-12-16"
-    },
-    {
-      "id": "89281985",
-      "title": "Family Feud at New England Grocery Chain Plays Out at Trial Over CEO Ouster",
-      "description": "A long-running family feud for control of the $8 billion-a-year Market Basket grocery chain in New England is about to take center stage at a trial to determine whether the former chief executive officer was improperly ousted by his three &#8230;",
-      "image_url": null,
-      "link": "https://www.insurancejournal.com/news/east/2025/12/16/851285.htm",
-      "source": "News Archives - Insurance Journal",
-      "published": "2025-12-16"
-    },
-    {
-      "id": "0be2fdc9",
-      "title": "Update: Trump Sues Britain\u2019s BBC for Up to $10 Billion Over Speech Edit",
-      "description": "President Donald Trump sued the BBC for up to $10 billion in damages over edited clips of a speech that made it appear he directed supporters to storm the U.S. Capitol, opening an international front in his fight against media &#8230;",
-      "image_url": "https://www.insurancejournal.com/app/uploads/2025/12/president-donald-trump-AP25345847276099-580x387.jpg",
-      "link": "https://www.insurancejournal.com/news/international/2025/12/16/851259.htm",
-      "source": "News Archives - Insurance Journal",
-      "published": "2025-12-16"
-    },
-    {
-      "id": "46c926cd",
-      "title": "Bjak Founder Weighs IPO as Malaysia Insurtech Seeks Expansion Into Europe",
-      "description": "Bjak Sdn, Malaysia&#8217;s largest online insurance aggregator, is mulling an initial public offering within the next two years as it seeks to enter Europe. Bjak is eyeing new markets in Spain and Germany in 2026 following its recent expansion in &#8230;",
-      "image_url": "https://www.insurancejournal.com/app/uploads/2025/12/kuala-lumpur-malaysia-skyline-bloomberg-580x387.jpg",
-      "link": "https://www.insurancejournal.com/news/international/2025/12/16/851238.htm",
-      "source": "News Archives - Insurance Journal",
-      "published": "2025-12-16"
-    },
-    {
-      "id": "76789305",
-      "title": "NSI Insurance Acquires Florida-Based Mutual Insurance Group",
-      "description": "Miami-based NSI Insurance Group has acquired another Miami-headquartered brokerage, Mutual Insurance Group, adding another milestone for the company that has doubled in size in recent years. &#8220;We are pleased to welcome Mutual Insurance Group to NSI Insurance Group, as we &#8230;",
-      "image_url": "https://www.insurancejournal.com/app/uploads/2025/04/mergers-acquisitions-concept-MandA-AdobeStock-580x387.jpeg",
-      "link": "https://www.insurancejournal.com/news/southeast/2025/12/16/851206.htm",
-      "source": "News Archives - Insurance Journal",
-      "published": "2025-12-16"
-    },
-    {
-      "id": "789272f8",
-      "title": "People: Canal Insurance in SC Names Grimm Chief Underwriting Officer",
-      "description": "Trucking coverage specialist Canal Insurance, based in Greenville, South Carolina, has named Matthew Grimm chief underwriting officer, effective this week. Grimm has more than 30 years of experience in the property-casualty insurance business, including leadership roles at Integrated Specialty Coverages, &#8230;",
-      "image_url": null,
-      "link": "https://www.insurancejournal.com/news/southeast/2025/12/16/851135.htm",
-      "source": "News Archives - Insurance Journal",
-      "published": "2025-12-16"
-    },
-    {
       "id": "18edbc24",
       "title": "NVIDIA Acquires Open-Source Workload Management Provider SchedMD",
       "description": "NVIDIA today announced it has acquired SchedMD \u2014 the leading developer of Slurm, an open-source workload management system for high-performance computing (HPC) and AI \u2014 to help strengthen the open-source software ecosystem and drive AI innovation for researchers, developers and enterprises. NVIDIA will continue to develop and distribute Slurm as open-source, vendor-neutral software, making it Read Article",
@@ -299,87 +605,6 @@
       "published": "2025-12-15"
     },
     {
-      "id": "a74fab31",
-      "title": "Nvidia Becomes a Major Model Maker With Nemotron 3",
-      "description": "The world\u2019s top chipmaker wants open source AI to succeed\u2014perhaps because closed models increasingly run on its rivals\u2019 silicon.",
-      "image_url": "https://media.wired.com/photos/693c6d8d199888f1c10473e8/master/pass/Nvidia-Doubles-Down-AI-Business-2249127231.jpg",
-      "link": "https://www.wired.com/story/nvidia-becomes-major-model-maker-nemotron-3/",
-      "source": "Feed: Artificial Intelligence Latest",
-      "published": "2025-12-15"
-    },
-    {
-      "id": "2962f401",
-      "title": "Presentation: Powering Enterprise AI Applications with Data and Open Source Software",
-      "description": "Francisco Javier Arceo explored Feast, the open-source feature store designed to address common data challenges in the AI/ML lifecycle, such as feature redundancy, and low-latency serving at scale. By Francisco Javier Arceo",
-      "image_url": null,
-      "link": "https://www.infoq.com/presentations/feast/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
-      "source": "InfoQ",
-      "published": "2025-12-15"
-    },
-    {
-      "id": "809a31bf",
-      "title": "Google Unveils New Tools and Libraries for Building AI Glasses Apps",
-      "description": "With the release of the Android XR SDK Developer Preview 3, Google has introduced two new libraries to help developers create AI Glasses experiences, Jetpack Projected and Jetpack Compose Glimmer. ARCore for Jetpack XR has also been expanded to work with AI Glasses, adding motion tracking and geospatial capabilities. By Sergio De Simone",
-      "image_url": null,
-      "link": "https://www.infoq.com/news/2025/12/android-glasses-ar-sdk/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
-      "source": "InfoQ",
-      "published": "2025-12-15"
-    },
-    {
-      "id": "b0a212cd",
-      "title": "Podcast: Building a More Appealing CLI for Agentic LLMs Based on Learnings from the Textual Framework",
-      "description": "Will McGugan, the maker of Textual and Rich frameworks, speaks about the reasoning of developing the two two libraries and the lesson learned. Also, he shares light on Toad, his current project, which he envisions being a more visually appealing way of interacting with agentic LLMs through command line. By Will McGugan",
-      "image_url": null,
-      "link": "https://www.infoq.com/podcasts/learnings-from-building-textual-framework/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
-      "source": "InfoQ",
-      "published": "2025-12-15"
-    },
-    {
-      "id": "eb3340a6",
-      "title": "Meta's React Compiler 1.0 Brings Automatic Memoization to Production",
-      "description": "Introducing React Compiler 1.0, a game-changing tool that automates optimization for React apps, enhancing performance by up to 12% for faster loads and 2.5x quicker interactions. Compatible with major frameworks and battle-tested at Meta, it simplifies builds with integrated diagnostics. Experience seamless improvement without code rewrites, empowering developers to code smarter. By Daniel Curtis",
-      "image_url": null,
-      "link": "https://www.infoq.com/news/2025/12/react-compiler-meta/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=global",
-      "source": "InfoQ",
-      "published": "2025-12-15"
-    },
-    {
-      "id": "dbef47db",
-      "title": "How Toshiba Tec and McKinsey are turning retail data into real-time decisions with NVIDIA",
-      "description": "Partnering with McKinsey, Toshiba Tec leveraged NVIDIA\u2019s GPU-accelerated, end to end suite to transform how retailers harness transaction data. The result? Faster, smarter insights at scale.",
-      "image_url": null,
-      "link": "https://www.mckinsey.com/industries/industrials/how-we-help-clients/how-toshiba-tec-and-mckinsey-are-turning-retail-data-into-real-time-decisions-with-nvidia",
-      "source": "McKinsey Insights & Publications",
-      "published": "2025-12-15"
-    },
-    {
-      "id": "581fffbe",
-      "title": "From pilots to performance: How COOs can scale AI in manufacturing",
-      "description": "A new survey of manufacturing COOs shows high hopes for scaling AI\u2014and high budgets. But some companies may be underinvesting in the enablers needed for AI to generate lasting value.",
-      "image_url": null,
-      "link": "https://www.mckinsey.com/capabilities/operations/our-insights/from-pilots-to-performance-how-coos-can-scale-ai-in-manufacturing",
-      "source": "McKinsey Insights & Publications",
-      "published": "2025-12-15"
-    },
-    {
-      "id": "260b0023",
-      "title": "We\u2019re publishing an AI playbook to help others with sustainability reporting.",
-      "description": "We\u2019re sharing a practical playbook to help organizations streamline and enhance sustainability reporting with AI.Corporate transparency is essential, but navigating frag\u2026",
-      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google-2025-AI-Playbook-for-Sus.max-600x600.format-webp.webp",
-      "link": "https://blog.google/outreach-initiatives/sustainability/ai-playbook-sustainability-reporting/",
-      "source": "The Keyword",
-      "published": "2025-12-15"
-    },
-    {
-      "id": "2a7cde3b",
-      "title": "Bring your research to life with integrated visual reports from Gemini Deep Research.",
-      "description": "Video showing a visual report from Gemini Deep Research.",
-      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/original_videos/wagtailvideo-cqy2x7d3_thumb.jpg",
-      "link": "https://blog.google/products/gemini/visual-reports/",
-      "source": "The Keyword",
-      "published": "2025-12-15"
-    },
-    {
       "id": "09c32c5e",
       "title": "Insurance Readability Isn\u2019t Improving and Insurance Agents Need to Step Up",
       "description": "A follow-up to my post, Homeowners Cannot Understand Their Policy Even When They Read It, is important because the topic cannot be overstated. That post was based on a research paper showing empirical evidence that most homeowners cannot understand their policy even after reading it. The 2025 Summer meeting of the NAIC Consumer Liaison Committee&#160;&#8230; The post Insurance Readability Isn\u2019t Improving and Insurance Agents Need to Step Up appeared first on Property Insurance Coverage Law Blog.",
@@ -387,285 +612,6 @@
       "link": "https://www.propertyinsurancecoveragelaw.com/blog/insurance-readability-crisis/",
       "source": "Property Insurance Coverage Law Blog",
       "published": "2025-12-15"
-    },
-    {
-      "id": "c2979527",
-      "title": "For the First Time, AI Analyzes Language as Well as a Human Expert",
-      "description": "If language is what makes us human, what does it mean now that large language models have gained \u201cmetalinguistic\u201d abilities?",
-      "image_url": "https://media.wired.com/photos/69380ff2c2102f279da71d1b/master/pass/Metalinguistics-cr-Robert-Neubecker-Lede.jpeg",
-      "link": "https://www.wired.com/story/in-a-first-ai-models-analyze-language-as-well-as-a-human-expert/",
-      "source": "Feed: Artificial Intelligence Latest",
-      "published": "2025-12-14"
-    },
-    {
-      "id": "a5a25ec1",
-      "title": "Cheers to AI: ADAM Robot Bartender Makes Drinks at Vegas Golden Knights Game",
-      "description": "In Las Vegas\u2019s T-Mobile Arena, fans of the Golden Knights are getting more than just hockey \u2014 they\u2019re getting a taste of the future. ADAM, a robot developed with NVIDIA Isaac libraries, is pouring drinks and turning heads in one of the NHL\u2019s most exciting venues. ADAM, short for Automated Dual Arm Mixologist, was developed Read Article",
-      "image_url": "https://blogs.nvidia.com/wp-content/uploads/2025/12/Richtech-KV-842x450.jpg",
-      "link": "https://blogs.nvidia.com/blog/adam-robot-vegas-golden-knights-thor/",
-      "source": "NVIDIA Blog",
-      "published": "2025-12-12"
-    },
-    {
-      "id": "7fad29c5",
-      "title": "AMD CEO Lisa Su Isn\u2019t Afraid of the Competition",
-      "description": "In this episode of Uncanny Valley we take you through our recent conversation with Lisa Su and go behind the scenes of our Big Interview event.",
-      "image_url": "https://media.wired.com/photos/693a07b2584a0ef96634d76e/master/pass/business_uncanny_valley_lisa_su.jpg",
-      "link": "https://www.wired.com/story/uncanny-valley-podcast-amd-ceo-lisa-su-isnt-afraid-of-the-competition/",
-      "source": "Feed: Artificial Intelligence Latest",
-      "published": "2025-12-12"
-    },
-    {
-      "id": "4fd8c163",
-      "title": "You\u2019re Thinking About AI and Water All Wrong",
-      "description": "Fears about AI data centers\u2019 water use have exploded. Experts say the reality is far more complicated than people think.",
-      "image_url": "https://media.wired.com/photos/693a15837657bddf72dde582/master/pass/Backchannel_karen_hao_ai_water.jpg",
-      "link": "https://www.wired.com/story/karen-hao-empire-of-ai-water-use-statistics/",
-      "source": "Feed: Artificial Intelligence Latest",
-      "published": "2025-12-12"
-    },
-    {
-      "id": "66723191",
-      "title": "Trump Signs Executive Order That Threatens to Punish States for Passing AI Laws",
-      "description": "The order creates a Justice Department task force to challenge state AI laws and directs the Commerce Department to pull future broadband funding from states that pass \u201conerous\u201d legislation.",
-      "image_url": "https://media.wired.com/photos/6938a0fca494c5f527a31bee/master/pass/Pol_Trump_AI_GettyImages-2250178700.jpg",
-      "link": "https://www.wired.com/story/trump-signs-executive-order-ai-state-laws/",
-      "source": "Feed: Artificial Intelligence Latest",
-      "published": "2025-12-12"
-    },
-    {
-      "id": "9ea9cb85",
-      "title": "BBVA and OpenAI collaborate to transform global banking",
-      "description": "BBVA is expanding its work with OpenAI through a multi-year AI transformation program, rolling out ChatGPT Enterprise to all 120,000 employees. Together, the companies will develop AI solutions that enhance customer interactions, streamline operations, and help build an AI-native banking experience.",
-      "image_url": null,
-      "link": "https://openai.com/index/bbva-collaboration-expansion",
-      "source": "OpenAI News",
-      "published": "2025-12-12"
-    },
-    {
-      "id": "eb37ff5b",
-      "title": "BNY builds \u201cAI for everyone, everywhere\u201d with OpenAI",
-      "description": "BNY is using OpenAI technology to expand AI adoption enterprise-wide. Through its Eliza platform, 20,000+ employees are building AI agents that enhance efficiency and improve client outcomes.",
-      "image_url": null,
-      "link": "https://openai.com/index/bny",
-      "source": "OpenAI News",
-      "published": "2025-12-12"
-    },
-    {
-      "id": "c4023687",
-      "title": "AI in Asia: Reimagining banking operations through agentic AI",
-      "description": "Multiagentic systems are transforming operations, combining the power of technology, processes, and people to deliver outsized impact for banks in Asia.",
-      "image_url": null,
-      "link": "https://www.mckinsey.com/capabilities/operations/our-insights/ai-in-asia-reimagining-banking-operations-through-agentic-ai",
-      "source": "McKinsey Insights & Publications",
-      "published": "2025-12-12"
-    },
-    {
-      "id": "25645f7d",
-      "title": "Lorraine Mitchelmore on the transformative power of peer networks",
-      "description": "The former President of Shell Canada and AWE board member reflects on her own leadership journey and the ways in which AWE is helping to grow the leaders that Canada needs and deserves.",
-      "image_url": null,
-      "link": "https://www.mckinsey.com/ca/overview/lorraine-mitchelmore-on-the-transformative-power-of-peer-networks",
-      "source": "McKinsey Insights & Publications",
-      "published": "2025-12-12"
-    },
-    {
-      "id": "8cf06ce7",
-      "title": "The future is agentic: AI\u2019s role in the end-to-end corporate credit process",
-      "description": "To integrate agentic AI into credit-related workflows and realize improvements, risk teams must identify critical, scalable use cases and convene cross-functional teams to develop solutions.",
-      "image_url": null,
-      "link": "https://www.mckinsey.com/capabilities/risk-and-resilience/our-insights/the-future-is-agentic-ais-role-in-the-end-to-end-corporate-credit-process",
-      "source": "McKinsey Insights & Publications",
-      "published": "2025-12-12"
-    },
-    {
-      "id": "9a7b87f2",
-      "title": "Bringing state-of-the-art Gemini translation capabilities to Google Translate",
-      "description": "An illustration of a phone shows Google Translate and icons for capabilities including text translations, speech-to-speech translations, and language praactice",
-      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Translate-Blog-121125.max-600x600.format-webp.webp",
-      "link": "https://blog.google/products/search/gemini-capabilities-translation-upgrades/",
-      "source": "The Keyword",
-      "published": "2025-12-12"
-    },
-    {
-      "id": "4529e945",
-      "title": "Improved Gemini audio models for powerful voice interactions",
-      "description": "Gemini Audio text logo",
-      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-audio-flash__keyword_hea.max-600x600.format-webp.webp",
-      "link": "https://blog.google/products/gemini/gemini-audio-model-updates/",
-      "source": "The Keyword",
-      "published": "2025-12-12"
-    },
-    {
-      "id": "5344c87a",
-      "title": "As AI Grows More Complex, Model Builders Rely on NVIDIA",
-      "description": "Unveiling what it describes as the most capable model series yet for professional knowledge work, OpenAI launched GPT-5.2 today. The model was trained and deployed on NVIDIA infrastructure, including NVIDIA Hopper and GB200 NVL72 systems. It\u2019s the latest example of how leading AI builders train and deploy at scale on NVIDIA\u2019s full-stack AI infrastructure. Pretraining: Read Article",
-      "image_url": "https://blogs.nvidia.com/wp-content/uploads/2025/12/end-to-end-press-best-models-trained-1920x1080-4660123-842x450.jpg",
-      "link": "https://blogs.nvidia.com/blog/leading-models-nvidia/",
-      "source": "NVIDIA Blog",
-      "published": "2025-12-11"
-    },
-    {
-      "id": "ef1f7bd8",
-      "title": "OpenAI Launches GPT-5.2 as It Navigates \u2018Code Red\u2019",
-      "description": "The ChatGPT-maker is releasing its \u201cbest model yet\u201d as it faces new pressures from Google and other AI competitors.",
-      "image_url": "https://media.wired.com/photos/6939fd17eaa4088bd3b69c9f/master/pass/GettyImages-2249343616.jpg",
-      "link": "https://www.wired.com/story/openai-gpt-launch-gemini-code-red/",
-      "source": "Feed: Artificial Intelligence Latest",
-      "published": "2025-12-11"
-    },
-    {
-      "id": "6c15444c",
-      "title": "The Disney-OpenAI Deal Redefines the AI Copyright War",
-      "description": "Disney is hedging against the future. OpenAI is clearing a path for Sora. And together they\u2019ve made a blueprint for how AI and Hollywood can move forward.",
-      "image_url": "https://media.wired.com/photos/693af48d5782fd7cc5c6f5a2/master/pass/biz-disney-sora-2239565403.jpg",
-      "link": "https://www.wired.com/story/disney-and-openais-deal-is-a-major-turning-point/",
-      "source": "Feed: Artificial Intelligence Latest",
-      "published": "2025-12-11"
-    },
-    {
-      "id": "4ea65ff8",
-      "title": "Advancing science and math with GPT-5.2",
-      "description": "GPT-5.2 is OpenAI\u2019s strongest model yet for math and science, setting new state-of-the-art results on benchmarks like GPQA Diamond and FrontierMath. This post shows how those gains translate into real research progress, including solving an open theoretical problem and generating reliable mathematical proofs.",
-      "image_url": null,
-      "link": "https://openai.com/index/gpt-5-2-for-science-and-math",
-      "source": "OpenAI News",
-      "published": "2025-12-11"
-    },
-    {
-      "id": "8c97ef9e",
-      "title": "Increasing revenue 300% by bringing AI to SMBs",
-      "description": "Discover how Podium used OpenAI\u2019s GPT-5 to build \u201cJerry,\u201d an AI teammate driving 300% growth and transforming how Main Street businesses serve customers.",
-      "image_url": null,
-      "link": "https://openai.com/index/podium",
-      "source": "OpenAI News",
-      "published": "2025-12-11"
-    },
-    {
-      "id": "8ecc5fa1",
-      "title": "The Walt Disney Company and OpenAI reach landmark agreement to bring beloved characters to Sora",
-      "description": "Disney and OpenAI have reached an agreement to bring more than 200 Disney, Marvel, Pixar and Star Wars characters to Sora for fan-inspired short videos. The agreement emphasizes responsible AI in entertainment and includes Disney\u2019s company-wide use of ChatGPT Enterprise and the OpenAI API.",
-      "image_url": null,
-      "link": "https://openai.com/index/disney-sora-agreement",
-      "source": "OpenAI News",
-      "published": "2025-12-11"
-    },
-    {
-      "id": "17277d61",
-      "title": "Update to GPT-5 System Card: GPT-5.2",
-      "description": "GPT-5.2 is the latest model family in the GPT-5 series. The comprehensive safety mitigation approach for these models is largely the same as that described in the GPT-5 System Card and GPT-5.1 System Card. Like OpenAI\u2019s other models, the GPT-5.2 models were trained on diverse datasets, including information that is publicly available on the internet, information that we partner with third parties to access, and information that our users or human trainers and researchers provide or generate.",
-      "image_url": null,
-      "link": "https://openai.com/index/gpt-5-system-card-update-gpt-5-2",
-      "source": "OpenAI News",
-      "published": "2025-12-11"
-    },
-    {
-      "id": "28706c3a",
-      "title": "Introducing GPT-5.2",
-      "description": "GPT-5.2 is our most advanced frontier model for everyday professional work, with state-of-the-art reasoning, long-context understanding, coding, and vision. Use it in ChatGPT and the OpenAI API to power faster, more reliable agentic workflows.",
-      "image_url": null,
-      "link": "https://openai.com/index/introducing-gpt-5-2",
-      "source": "OpenAI News",
-      "published": "2025-12-11"
-    },
-    {
-      "id": "0b85f29e",
-      "title": "Eric Larsen on the emergence and potential of AI in healthcare",
-      "description": "Eric Larsen, president of TowerBrook Advisors, discusses where healthcare incumbents stand in the current AI-focused environment and their opportunity to accelerate adoption to improve outcomes.",
-      "image_url": null,
-      "link": "https://www.mckinsey.com/industries/healthcare/our-insights/eric-larsen-on-the-emergence-and-potential-of-ai-in-healthcare",
-      "source": "McKinsey Insights & Publications",
-      "published": "2025-12-11"
-    },
-    {
-      "id": "143707bf",
-      "title": "CIB in an era of volatility, AI, and nonbank challengers",
-      "description": "Corporate and investment banking players need a new playbook to thrive in an environment of geopolitical and macroeconomic uncertainty; the rise of non-bank attackers, and increasing AI adoption.",
-      "image_url": null,
-      "link": "https://www.mckinsey.com/industries/financial-services/our-insights/cib-in-an-era-of-volatility-ai-and-nonbank-challengers",
-      "source": "McKinsey Insights & Publications",
-      "published": "2025-12-11"
-    },
-    {
-      "id": "9c4dcbe7",
-      "title": "Gradient Canvas: Celebrating over a decade of artistic collaborations with AI",
-      "description": "Grid of 12 diverse artworks: faceted green sculpture, illuminated green cursive text, and digital abstracts.",
-      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gradient_Canvas_hero_FS1ek3X.max-600x600.format-webp.webp",
-      "link": "https://blog.google/technology/ai/google-gradient-canvas-ai-art/",
-      "source": "The Keyword",
-      "published": "2025-12-11"
-    },
-    {
-      "id": "2d0a4833",
-      "title": "Take the web for a fresh spin with GenTabs, built with Gemini 3",
-      "description": "Image of a user clicking the \"Open GenTab\" button after their Entropy Explainer app is finished.",
-      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Disco_SizzleGentabs_Thumbnail_1.max-600x600.format-webp.webp",
-      "link": "https://blog.google/technology/google-labs/gentabs-gemini-3/",
-      "source": "The Keyword",
-      "published": "2025-12-11"
-    },
-    {
-      "id": "694d4c08",
-      "title": "Build with Gemini Deep Research",
-      "description": "Gemini Deep Research Agent Text logo",
-      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/GeminiDeepResearch-Keyword_RD1-.max-600x600.format-webp.webp",
-      "link": "https://blog.google/technology/developers/deep-research-agent-gemini-api/",
-      "source": "The Keyword",
-      "published": "2025-12-11"
-    },
-    {
-      "id": "97e81814",
-      "title": "Fight Over Appraisal: Tennessee Court Reaffirms What Appraisers Can and Cannot Decide",
-      "description": "The recent federal decision in Nashville Communications v. Auto-Owners Insurance Company 1 offers a reminder of how appraisal is supposed to work in Tennessee and why insurers sometimes overplay their hand when trying to recast a simple amount-of-loss dispute into an alleged causation or coverage battle. The case turned on a narrow strip of parapet&#160;&#8230; The post Fight Over Appraisal: Tennessee Court Reaffirms What Appraisers Can and Cannot Decide appeared first on Property Insurance Coverage Law Blog.",
-      "image_url": null,
-      "link": "https://www.propertyinsurancecoveragelaw.com/blog/tennessee-appraisal-amount/",
-      "source": "Property Insurance Coverage Law Blog",
-      "published": "2025-12-11"
-    },
-    {
-      "id": "894b158d",
-      "title": "Walker receives the NAIC Robert Dineen Award for outstanding service",
-      "description": "Texas Department of Insurance (TDI) Deputy Commissioner Jamie Walker won this year\u2019s Robert Dineen Award, the highest honor for a state regulator bestowed by the National Association of Insurance Commissioners (NAIC).",
-      "image_url": null,
-      "link": "https://www.tdi.texas.gov/news/2025/tdi12112025.html",
-      "source": "News and tips",
-      "published": "2025-12-11"
-    },
-    {
-      "id": "abe32a3a",
-      "title": "Walker recibe el premio Robert Dineen de NAIC por su destacado servicio",
-      "description": "Jamie Walker, subcomisionada del Departamento de Seguros de Texas, gan\u00f3 el premio Robert Dineen de este a\u00f1o, el m\u00e1ximo galard\u00f3n para un regulador estatal otorgado por la Asociaci\u00f3n Nacional de Comisionados de Seguros.",
-      "image_url": null,
-      "link": "https://www.tdi.texas.gov/news/2025/tdi12112025-sp.html",
-      "source": "News and tips",
-      "published": "2025-12-11"
-    },
-    {
-      "id": "7494a919",
-      "title": "Opt-In NVIDIA Software Enables Data Center Fleet Management",
-      "description": "As the scale and complexity of AI infrastructure grows, data center operators need continuous visibility into factors including performance, temperature and power usage. These insights enable data center operators to actively monitor and adjust data center configurations across large-scale, distributed systems \u2014 validating that these systems are operating at their highest efficiency and reliability. NVIDIA Read Article",
-      "image_url": "https://blogs.nvidia.com/wp-content/uploads/2025/12/dgx-press-cloud-new-mother-1920x1080-1-842x450.jpg",
-      "link": "https://blogs.nvidia.com/blog/optional-data-center-fleet-management-software/",
-      "source": "NVIDIA Blog",
-      "published": "2025-12-10"
-    },
-    {
-      "id": "2a9ea668",
-      "title": "How NVIDIA H100 GPUs on CoreWeave\u2019s AI Cloud Platform Delivered a Record-Breaking Graph500 Run",
-      "description": "The world\u2019s top-performing system for graph processing at scale was built on a commercially available cluster. NVIDIA last month announced a record-breaking benchmark result of 410 trillion traversed edges per second (TEPS), ranking No. 1 on the 31st Graph500 breadth-first search (BFS) list. Performed on an accelerated computing cluster hosted in a CoreWeave data center Read Article",
-      "image_url": "https://blogs.nvidia.com/wp-content/uploads/2025/12/rapids-wholegraph-24-corp-blog-1280x680-1-842x450.png",
-      "link": "https://blogs.nvidia.com/blog/h100-coreweave-graph500/",
-      "source": "NVIDIA Blog",
-      "published": "2025-12-10"
-    },
-    {
-      "id": "5d87e650",
-      "title": "3 Ways NVIDIA Is Powering the Industrial Revolution",
-      "description": "The NVIDIA accelerated computing platform is leading supercomputing benchmarks once dominated by CPUs, enabling AI, science, business and computing efficiency worldwide. Moore\u2019s Law has run its course, and parallel processing is the way forward. With this evolution, NVIDIA GPU platforms are now uniquely positioned to deliver on the three scaling laws \u2014 pretraining, post-training and Read Article",
-      "image_url": "https://blogs.nvidia.com/wp-content/uploads/2025/12/cpu-to-gpu-platform-shift_1280x680-842x450.jpg",
-      "link": "https://blogs.nvidia.com/blog/gpu-cuda-scaling-laws-industrial-revolution/",
-      "source": "NVIDIA Blog",
-      "published": "2025-12-10"
     }
   ]
 }

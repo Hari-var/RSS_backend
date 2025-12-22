@@ -1,0 +1,8 @@
+{
+  "1": {
+    "username": "admin",
+    "role": "admin",
+    "created_time": "2024-01-01T00:00:00Z",
+    "encrypted_password": "$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewdBPj6uk6L7K1/W"
+  }
+}
