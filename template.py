@@ -54,7 +54,7 @@ HTML_HEAD = f"""<!DOCTYPE html>
         <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="margin: 0 auto;" class="email-container">
             <tr>
                 <td style="padding: 20px 0; text-align: center;">
-                    <img src="https://valuemomentum.club/wp-content/uploads/2025/10/ValueMomentum_logo.png" width="200" height="auto" alt="ValueMomentum" border="0" style="height: auto; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555; display: block; margin: 0 auto;">
+                    <img src="https://raw.githubusercontent.com/Hari-var/RSS_feed/refs/heads/main/public/ValueMomentum_logo.png" width="200" height="auto" alt="ValueMomentum" border="0" style="height: auto; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555; display: block; margin: 0 auto;">
                 </td>
             </tr>
             <tr>
