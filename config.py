@@ -21,4 +21,4 @@ eve_api_key = os.environ.get("event_api_key")
 cx = os.environ.get("CX")
 posts_cache_hours = config.get("posts_cache_hours", 24)
 events_cache_hours = config.get("events_cache_hours", 5)
-name = "hari"
+
